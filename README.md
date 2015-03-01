@@ -1,7 +1,7 @@
 # Проект «Pink»
 
 * Студент: [Катерина Добра](https://htmlacademy.ru/profile/id12332).
-* Наставник: `Unknown`.
+* Наставник: [Андрей Алексеев](https://htmlacademy.ru/profile/id4596).
 
 --
 
