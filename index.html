@@ -8,146 +8,162 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="page-header">
     <div class="wrapper">
-      <h1 class="header-logo">
+      <h1 class="logo">
         <a href="/"><img src="img/pink-logo-mob.png" alt="Pink"></a>
       </h1>
-      <div class="nav-collapse">
-        <a class="nav-collapse-open js-nav-open" title="Меню">Меню</a>
+      <div class="page-header__nav-wrap">
+        <a class="nav-toggle  js-nav-toggle" title="Меню">Меню</a>
+        <nav class="main-nav">
+          <ul>
+            <li class="active"><a href="#">Информация</a></li>
+            <li><a href="#">Возможности</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Стоимость</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
-  
-  <div class="hidden-nav">
-    <div class="wrapper">
-      <div class="page-header-logo">
-        <a href="/"><img src="img/pink-logo-mob.png" alt="Pink"></a>
-      </div>
-      <div class="nav-collapse">
-        <a class="nav-collapse-close js-nav-close" title="Закрыть меню"></a>
-      </div>
-      <nav class="main-menu">
-        <ul>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Возможности</a></li>
-          <li><a href="#">Отзывы</a></li>
-          <li><a href="#">Стоимость</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
 
-  <div class="header-below">
-    <div class="wrapper">
-      <div class="header-below-text">
-        <h2 class="h2-light">Взгляните на жизнь иначе!</h2>
-        <img src="img/header-bg2.jpg" alt="">
-      </div>
-      <div class="header-below-apps">
+  <div class="intro">
+    <div class="intro__cont">
+      <h2 class="intro__caption">Взгляните на жизнь иначе!</h2>
+      <div class="intro__desc">
         <a class="btn" href="#">Скачать приложение</a>
-        <ul>
-          <li><a href="#">Apple</a></li>
-          <li><a href="#">Android</a></li>
-          <li><a href="#">Windows</a></li>
+        <ul class="intro__apps-list">
+          <li><img src="img/icon--apple.png" alt="Apple"></li>
+          <li><img src="img/icon--android.png" alt="Android"></li>
+          <li><img src="img/icon--windows.png" alt="Windows"></li>
         </ul>
         <p>Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
       </div>
     </div>
   </div>
 
-  <div class="main">
-    <div class="features-top">
-      <div class="h2">Устали от серости мегаполиса?</div>
-      <div class="h2">Нам есть, что вам предложить!</div>
+  <main>
+    <div class="box">
+      <div class="page-caption">Устали от серости мегаполиса?</div>
+      <div class="page-caption">Нам есть, что вам предложить!</div>
     </div>
 
-    <div class="features">
-      <section class="feature">
-        <h3>Поднимает настроение</h3>
-        <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-      </section>
-      <section class="feature">
-        <h3>Меняет мир вокруг</h3>
-        <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-      </section>
-      <section class="feature">
-        <h3>Заводит новых друзей</h3>
-        <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-      </section>
+    <div class="box box--shear">
+      <ul class="features">
+        <li class="features__item">
+          <strong class="features__caption">Поднимает настроение</strong>
+          <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+        </li>
+        <li class="features__item">
+          <strong class="features__caption">Меняет мир вокруг</strong>
+          <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </li>
+        <li class="features__item">
+          <strong class="features__caption">Заводит новых друзей</strong>
+          <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+        </li>
+      </ul>
     </div>
 
-    <div class="reviews">
-      <div class="slider">
-        <ul class="slides">
-          <li>
-            <h3 class="h3">Николай Петров</h3>
-            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </li>
-          <li>
-            <h3 class="h3">Николай Петров2</h3>
-            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </li>
-          <li>
-            <h3 class="h3">Николай Петров3</h3>
-            <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </li>
-        </ul>
+    <div class="box">
+      <ul class="slider slider--reviews">
+        <li class="active">
+          <blockquote class="reviews">
+            <cite class="reviews__author">Николай Петров</cite>
+            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote class="reviews">
+            <cite class="reviews__author">Николай Петров</cite>
+            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </blockquote>
+        </li>
+        <li>
+          <blockquote class="reviews">
+            <cite class="reviews__author">Николай Петров</cite>
+            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </blockquote>
+        </li>
+      </ul>
+      <div class="slider__pagination">
+        <i class="active"></i>
+        <i></i>
+        <i></i>
       </div>
     </div>
 
-    <div class="price">
-      <div class="slider">
-        <table class="price-table">
-          <tr>
-            <th>
-              <h3 class="h3-light">Стандарт1</h3>
-              <p>3,99 USD</p>
-            </th>
-            <th>
-              <h3 class="h3-light">Стандарт</h3>
-              <p>3,99 USD</p>
-            </th>
-            <th>
-              <h3 class="h3-light">Стандарт3</h3>
-              <p>3,99 USD</p>
-            </th>
-          </tr>
-          <tr>
-            <td>Розовый фильтр <span><img src="img/v.png" alt="check"></span></td>
-            <td>Розовый фильтр <span><img src="img/v.png" alt="check"></span></td>
-            <td>Розовый фильтр <span><img src="img/v.png" alt="check"></span></td>
-          </tr>
-          <tr>
-            <td>Смайлики <span><img src="img/v.png" alt="check"></span></td>
-            <td>Смайлики <span><img src="img/v.png" alt="check"></span></td>
-            <td>Смайлики <span><img src="img/v.png" alt="check"></span></td>
-          </tr>
-          <tr>
-            <td>Комментарии <span><img src="img/x.png" alt="uncheck"></span></td>
-            <td>Комментарии <span><img src="img/x.png" alt="uncheck"></span></td>
-            <td>Комментарии <span><img src="img/x.png" alt="uncheck"></span></td>
-          </tr>
-        </table>
+    <div class="box box--shear">
+      <ul class="slider slider--price">
+        <li class="active">
+          <table class="price-table">
+            <tr>
+              <th colspan="2" class="price-table__caption">Стандарт <span>3,99 USD</span></th>
+            </tr>
+            <tr>
+              <td>Розовый фильтр</td>
+              <td><span class="check"><i class="checked">есть</i></span></td>
+            </tr>
+            <tr>
+              <td>Смайлики</td>
+              <td><span class="check"><i class="checked">есть</i></span></td>
+            </tr>
+            <tr>
+              <td>Комментарии</td>
+              <td><span class="check"><i>нет</i></span></td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table class="price-table">
+            <tr>
+              <th colspan="2" class="price-table__caption">Стандарт <span>3,99 USD</span></th>
+            </tr>
+            <tr>
+              <td>Розовый фильтр</td>
+              <td><span class="check"><i class="checked">есть</i></span></td>
+            </tr>
+            <tr>
+              <td>Смайлики</td>
+              <td><span class="check"><i class="checked">есть</i></span></td>
+            </tr>
+            <tr>
+              <td>Комментарии</td>
+              <td><span class="check"><i>нет</i></span></td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+      <div class="slider__pagination">
+        <i class="active"></i>
+        <i></i>
+        <i></i>
       </div>
     </div>
-  </div>
+  </main>
 
-  <footer>
-    <div class="wrapper">
-      <div class="footer-contacts">
-        <h2 class="h2">Остались вопросы? Свяжитесь с нами!</h2>
-        <p>Звоните: <span>8 (800) 1000 900</span></p>
-        <p>Пишите: <span>hello@pinkapp.ru</span></p>
-        <p>Приезжайте в гости: <span>Санкт-Петербург, Невский проспект, д. 20</span></p>
+
+  <footer class="page-footer">
+    <div class="box box--angle">
+      <div class="page-footer__contacts">
+        <h2 class="page-caption">Остались вопросы? Свяжитесь с нами!</h2>
+        <dl>
+          <dt>Звоните:</dt>
+          <dd>8 (800) 1000 900</dd>
+
+          <dt>Пишите:</dt>
+          <dd>hello@pinkapp.ru</dd>
+
+          <dt>Приезжайте в гости:</dt>
+          <dd>Санкт-Петербург, Невский проспект, д. 20</dd>
+        </dl>
       </div>
-      <div class="footer-map">
+      <div class="page-footer__map">
         <img src="img/map.jpg" alt="Map">
       </div>
     </div>
   </footer>
 
   <!-- <script src="js/script.js"></script> -->
-
 </body>
 </html>
