@@ -3,6 +3,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+
     // Lint Spaces in code
     lintspaces: {
       all: {
@@ -23,10 +24,36 @@ module.exports = function(grunt) {
           showCodes: true
         }
       }
+    },
+
+    less: {
+      build: {
+        src: 'less/style.less',
+        dest: 'css/style.css'
+      }
     }
+    
+
+
   });
 
   grunt.loadNpmTasks('grunt-lintspaces');
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-notify');
 
-  grunt.registerTask('lint', ['lintspaces']);
+
+
+  grunt.registerTask('default', [
+    'less'
+    
+  ]);
+
+
+
+  grunt.registerTask('lint', [
+    'lintspaces'
+  ]);
 };
