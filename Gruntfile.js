@@ -6,7 +6,21 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
 
-    // Lint Spaces in code
+    notify: {
+      // custom_options: {
+      //   options: {
+      //     // Task-specific options go here. 
+      //   }
+      // },
+      watch: {
+        options: {
+          title: 'Task Complete',  // optional 
+          message: 'LESS and cssmin finished running', //required 
+        }
+      }
+    },
+
+
     lintspaces: {
       all: {
         src: [
@@ -76,7 +90,6 @@ module.exports = function(grunt) {
       }
     }
 
-
   });
 
 
@@ -85,7 +98,8 @@ module.exports = function(grunt) {
   grunt.registerTask('style', [
     'less',
     'autoprefixer',
-    'cssmin'
+    'cssmin',
+    'notify'
   ]);
 
 
