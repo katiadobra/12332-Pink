@@ -1,0 +1,24 @@
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+  background-color: #ffffff;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #d22856;
+  text-decoration: underline;
+}
+a {
+  text-shadow: 1px 1px #000;
+}
+.intro {
+  box-shadow: 1px 1px 5px #000;
+  background: linear-gradient(red, yellow);
+  height: 100px;
+}

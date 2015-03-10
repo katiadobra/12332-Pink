@@ -1,9 +1,12 @@
 module.exports = function(grunt) {
 
+  require('load-grunt-tasks')(grunt);
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
 
+    // Lint Spaces in code
     lintspaces: {
       all: {
         src: [
@@ -25,29 +28,64 @@ module.exports = function(grunt) {
       }
     },
 
+
+
     less: {
       build: {
         src: 'less/style.less',
         dest: 'css/style.css'
       }
-    }
+    },
+
+
+
+    autoprefixer: {
+      
+      style: {
+        options: {
+          browsers: ['last 2 versions', 'ie 9']
+        },
+        src: 'css/style.css'
+      },
+    },
     
+
+
+    cssmin: {
+      target: {
+        src: 'css/style.css',
+        dest: 'css/style.min.css'
+      }
+    },
+
+
+    watch: {
+      less: {
+        files: 'less/**/*.less',
+        tasks: ['style'],
+        options: {
+          spawn: false,
+          livereload: true
+        }
+      },
+      html: {
+        files: '*.html',
+        options: {
+          livereload: true
+        }
+      }
+    }
 
 
   });
 
-  grunt.loadNpmTasks('grunt-lintspaces');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-notify');
 
 
 
-  grunt.registerTask('default', [
-    'less'
-    
+  grunt.registerTask('style', [
+    'less',
+    'autoprefixer',
+    'cssmin'
   ]);
 
 
