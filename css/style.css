@@ -192,3 +192,9 @@ a:focus {
   color: #d22856;
   text-decoration: underline;
 }
+.btn {
+  color: #337ab7;
+  background: transparent;
+  padding: 5px 10px;
+  border-radius: 20px;
+}

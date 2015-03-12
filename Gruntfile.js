@@ -7,15 +7,10 @@ module.exports = function(grunt) {
 
 
     notify: {
-      // custom_options: {
-      //   options: {
-      //     // Task-specific options go here. 
-      //   }
-      // },
-      watch: {
+      less: {
         options: {
           title: 'Task Complete',  // optional 
-          message: 'LESS and cssmin finished running', //required 
+          message: 'LESS finished running' //required 
         }
       }
     },
@@ -99,12 +94,8 @@ module.exports = function(grunt) {
     'less',
     'autoprefixer',
     'cssmin',
-    'notify'
+    'notify:less'
   ]);
 
-
-
-  grunt.registerTask('lint', [
-    'lintspaces'
-  ]);
+  grunt.registerTask('lint', ['lintspaces']);
 };
