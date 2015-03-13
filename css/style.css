@@ -192,9 +192,58 @@ a:focus {
   color: #d22856;
   text-decoration: underline;
 }
+.page-caption {
+  font-size: 24px;
+}
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.logo {
+  float: left;
+  margin: 0;
+}
 .btn {
-  color: #337ab7;
+  display: inline-block;
+  padding: 12px 15px;
+  margin-bottom: 17px;
+  color: #fff;
   background: transparent;
-  padding: 5px 10px;
-  border-radius: 20px;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  text-align: center;
+}
+.btn:hover,
+.btn:focus {
+  background: #fff;
+  color: #1d2631;
+}
+.intro {
+  background: #1d2631 url(/img/bg__intro.png) 50% 0 no-repeat;
+}
+.intro__container {
+  text-align: center;
+}
+.intro__caption {
+  margin: 0;
+  padding: 83px 0 336px;
+  font-size: 24px;
+  color: #fff;
+}
+.intro__desc {
+  background: #1d2631;
+  padding: 26px 22px;
+}
+.intro__desc p {
+  color: #fff;
+}
+.intro__apps-list {
+  padding: 0;
+}
+.intro__apps-list li {
+  display: inline-block;
+  margin: 0 16px;
 }
