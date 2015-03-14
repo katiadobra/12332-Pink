@@ -1,0 +1,44 @@
+.clearfix() {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+// Position
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+// Size
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+
+
+// Color
+.color (@color) {
+	color: @color;
+}
+.color (@color, @opacity) {
+	color: fadeout(@color, @opacity);
+}
+
+.bg (@color) {
+	background: @color;
+}
+.bg (@color, @opacity) {
+	background: fadeout(@color, @opacity);
+}
+
+
+//
