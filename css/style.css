@@ -283,7 +283,7 @@ table {
 }
 .page-footer__map {
   height: 430px;
-  background: #f2f2f2 url(img/map.png) 50% 0 no-repeat;
+  background: #f2f2f2 url(../img/map.png) 50% 0 no-repeat;
 }
 .logo {
   float: left;
