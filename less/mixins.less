@@ -1,12 +1,15 @@
-.clearfix() {
-  &:before,
+.clearfix {
   &:after {
     content: '';
     display: table;
-  }
-  &:after {
     clear: both;
   }
+}
+
+
+.clearlist {
+  list-style: none;
+  padding-left: 0;
 }
 
 
@@ -26,19 +29,31 @@
 
 
 // Color
-.color (@color) {
-	color: @color;
-}
-.color (@color, @opacity) {
-	color: fadeout(@color, @opacity);
-}
-
 .bg (@color) {
 	background: @color;
 }
-.bg (@color, @opacity) {
+.bg (@color, @opacity: 50%) {
 	background: fadeout(@color, @opacity);
 }
 
 
-//
+// Grid
+.generate-width(@n: 1, @size: xs, @i: 12) {
+
+  & when ( @size = xs ) {
+    width: (@n * 100% / @i);
+  }
+
+  & when ( @size = md ) {
+    @media (min-width: 760px) {
+      width: (@n * 100% / @i);
+    }
+  }
+
+  & when ( @size = lg ) {
+    @media (min-width: 1200px) {
+      width: (@n * 100% / @i);
+    }
+  }
+
+}

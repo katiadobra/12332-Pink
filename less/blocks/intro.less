@@ -3,21 +3,28 @@
 
 
 	&__container {
+		position: relative;
+		padding-top: 456px;
 		text-align: center;
 	}
 
 
 	&__caption {
+		position: absolute;
+		width: 90%;
+		top: 85px;
 		margin: 0;
-		padding: 83px 0 336px;
+		padding: 0 5%;
 		font-size: @fz-h3;
-		color: #fff;
+		line-height: @lh-caption;
+		font-weight: @caption-font-weight;
+		color: @c_white;
 	}
 
 
 	&__desc {
 		background: @base-color;
-		padding: 26px 22px;
+		padding: 26px 5% 18px;
 
 		p {
 			color: #fff;
@@ -26,7 +33,7 @@
 
 
 	&__apps-list {
-		padding: 0;
+		&:extend(.clearlist);
 
 		li {
 			display: inline-block;
