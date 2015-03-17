@@ -24,7 +24,7 @@
 
 	&__desc {
 		background: @base-color;
-		padding: 26px 5% 18px;
+		padding: 28px 20px 18px;
 
 		p {
 			color: #fff;
@@ -34,10 +34,15 @@
 
 	&__apps-list {
 		&:extend(.clearlist);
+		padding-bottom: 22px;
 
 		li {
 			display: inline-block;
-			margin: 0 16px;
+			margin: 0 18px 0 15px;
+
+			img {
+				vertical-align: bottom;
+			}
 		}
 	}
 }

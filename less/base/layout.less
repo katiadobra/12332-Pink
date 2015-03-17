@@ -5,7 +5,7 @@
     width: (@n * 100% / @i);
   }
 
-  & when ( @size = md ) {
+  & when ( @size = sm ) {
     @media (min-width: @screen-md) {
       width: (@n * 100% / @i);
     }
@@ -42,7 +42,7 @@
 
 .page-header__nav-wrap {
   .generate-width(6, xs, 12);
-  .generate-width(9, md, 12);
+  .generate-width(9, sm, 12);
   
   float: right;
   text-align: right;
@@ -50,13 +50,13 @@
 
 .logo {
   .generate-width(6, xs, 12);
-  .generate-width(3, md, 12);
+  .generate-width(3, sm, 12);
 }
 
 
 
 features {
-  .generate-width(6, md, 12);
+  .generate-width(6, sm, 12);
 }
 
 
@@ -71,7 +71,7 @@ features {
 
 .page-footer__list {
   .generate-width(12, xs, 12);
-  .generate-width(5, md, 12);
+  .generate-width(5, sm, 12);
 }
 
 
