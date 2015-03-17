@@ -1,4 +1,9 @@
+html,
 body {
+  height: 100%;
+}
+body {
+  min-width: 300px;
   font-family: @ff-base;
   font-size: @fz-base;
   line-height: @lh-base;
@@ -21,8 +26,19 @@ a {
   &:visited {
     text-decoration: none;
   }
+
+  &:active,
+  &.active {
+    .color(@base-color, 70%);
+    text-decoration: none;
+  }
 }
 
 table {
-  background-color: @table-bg;
+  background-color: @white;
+
+  td {
+    border: 2px solid @grey;
+    padding: 5px 10px;
+  }
 }

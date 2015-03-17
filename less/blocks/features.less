@@ -1,12 +1,18 @@
 .features {
   &:extend(.clearlist);
+  text-align: center;
 
 
   &__item {
     display: block;
+
+    p {
+        padding-bottom: 15px;
+    }
   }
 
   &__caption {
     font-size: @fz-large;
+    line-height: @lh-caption;
   }
 }

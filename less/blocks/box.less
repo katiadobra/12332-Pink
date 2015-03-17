@@ -1,12 +1,13 @@
 .box {
   position: relative;
-  // padding: 25px 5% 50px;
+  &:extend(.clearfix);
 
   &--shear {
     background: @grey;
   }
 
   &--angle:after {
+    &:extend(.clearfix);
     content: '';
     position: absolute;
     bottom: -35px;
@@ -33,6 +34,7 @@
 
 @media (min-width: @screen-md) {
   .box {
+
     &--angle:after {
       bottom: -60px;
     }

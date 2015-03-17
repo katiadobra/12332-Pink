@@ -187,7 +187,12 @@ th {
   list-style: none;
   padding-left: 0;
 }
+html,
 body {
+  height: 100%;
+}
+body {
+  min-width: 300px;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.71428571;
@@ -206,14 +211,33 @@ a:focus {
 a:visited {
   text-decoration: none;
 }
+a:active,
+a.active {
+  color: rgba(40, 54, 69, 0.3);
+  text-decoration: none;
+}
 table {
-  background-color: transparent;
+  background-color: #ffffff;
+}
+table td {
+  border: 2px solid #f2f2f2;
+  padding: 5px 10px;
+}
+.page-wrap {
+  display: table;
+  width: 100%;
+  height: 100%;
 }
 .page-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
+}
+.page-footer {
+  display: table-row;
+  height: 1px;
 }
 .page-header__nav-wrap {
   width: 50%;
@@ -231,6 +255,11 @@ table {
 @media (min-width: 700px) {
   .logo {
     width: 25%;
+  }
+}
+@media (min-width: 700px) {
+  features {
+    width: 50%;
   }
 }
 .page-footer__contacts {
@@ -326,7 +355,8 @@ table {
   background: transparent;
   text-decoration: none;
 }
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background: #ffffff;
   color: #d22856;
   text-decoration: none;
@@ -390,9 +420,31 @@ table {
     bottom: -60px;
   }
 }
+.price-table__caption {
+  background: #283645;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 16px 15px;
+  width: 100%;
+}
+.price-table__caption span {
+  display: block;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.125;
+}
+.features {
+  text-align: center;
+}
 .features__item {
   display: block;
 }
+.features__item p {
+  padding-bottom: 15px;
+}
 .features__caption {
   font-size: 18px;
+  line-height: 1.125;
 }
