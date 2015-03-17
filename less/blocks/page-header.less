@@ -9,9 +9,14 @@
 }
 
 .page-caption {
-  padding-bottom: 32px;
+    padding: 17px 5%;
   font-size: @fz-page-caption;
   font-weight: @caption-font-weight;
   line-height: @lh-caption;
   text-align: center;
+}
+
+@media (min-width: @screen-md) {
+  .page-caption {
+    font-size: 40px;
 }

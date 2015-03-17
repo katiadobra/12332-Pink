@@ -4,16 +4,26 @@
   margin-bottom: 17px;
   font-size: @fz-large;
   font-weight: @btn-font-weight;
-  color: @c_white;
+  color: @white;
   background: transparent;
   border: 3px solid #fff;
   border-radius: 30px;
   text-align: center;
 
-  &:hover,
-  &:focus {
-    background: #fff;
-    color: @base-color;
+  
+  &:visited {
+    color: @white;
+    background: transparent;
+    text-decoration: none;
+  }
+  &:hover{
+    background: @white;
+    color: @pink;
+    text-decoration: none;
+  }
+  &:active {
+    .color(@pink, 70%);
+    background: @white;
     text-decoration: none;
   }
 }

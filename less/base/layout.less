@@ -1,3 +1,31 @@
+// Grid
+.generate-width(@n: 1, @size: xs, @i: 12) {
+
+  & when ( @size = xs ) {
+    width: (@n * 100% / @i);
+  }
+
+  & when ( @size = md ) {
+    @media (min-width: @screen-md) {
+      width: (@n * 100% / @i);
+    }
+  }
+
+  & when ( @size = lg ) {
+    @media (min-width: @screen-lg) {
+      width: (@n * 100% / @i);
+    }
+  }
+
+  & when ( @size = lg2 ) {
+    @media (min-width: @screen-lg2) {
+      width: (@n * 100% / @i);
+    }
+  }
+}
+
+
+
 .page-wrap {
   
 }
