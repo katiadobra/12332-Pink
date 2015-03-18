@@ -4,27 +4,36 @@
 
   &--shear {
     background: @grey;
+    margin-top: 80px;
+
+    .box__container {
+      margin-top: -31px;
+    }
   }
 
-  &--angle:after {
-    &:extend(.clearfix);
+  &--shear:before {
     content: '';
     position: absolute;
-    bottom: -35px;
-    height: 167px;
-    width: 100%;
-    background: url(../img/box--angle.png) 50% 0 no-repeat;
-    background-size: cover;
+    top: -70px;
+    width: 110%;
+    height: 130px;
+    background: #f2f2f2;
+    transform: rotate(-4.5deg);
+    z-index: -1;
+  }
+
+
+  &--angle:after {
+    content: '';
+    position: absolute;
     z-index: 0;
-  // content: '';
-  // position: absolute;
-  // bottom: -61px;
-  // height: 50px;
-  // width: 90%;
-  // background-image: linear-gradient(125deg, transparent 25%, #ffffff 25%), linear-gradient(225deg, transparent 25%, #ffffff 25%);
-  // background-size: 115px 115px;
-  // background-repeat: no-repeat;
-  // background-color: red;
+    height: 200px;
+    width: 101%;
+    bottom: -120px;
+    background-image: linear-gradient(12deg, transparent 50%, @white 50%),linear-gradient(-12deg, transparent 50%, @white 50%);
+    background-size: 50% 200px;
+    background-repeat: no-repeat;
+    background-position: 0 0, 99% 0;
   }
 
   &__container {

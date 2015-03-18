@@ -383,6 +383,7 @@ body {
   line-height: 1.71428571;
   color: #283645;
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 input,
 button,
@@ -450,7 +451,6 @@ h6 {
 }
 p {
   margin: 0 0 11.5px;
-  letter-spacing: -0.0175em;
 }
 .page-wrap {
   display: table;
@@ -621,6 +621,7 @@ p {
 }
 .intro__desc p {
   color: #fff;
+  letter-spacing: -0.0175em;
 }
 .intro__apps-list {
   padding-bottom: 22px;
@@ -637,16 +638,34 @@ p {
 }
 .box--shear {
   background: #f2f2f2;
+  margin-top: 80px;
+}
+.box--shear .box__container {
+  margin-top: -31px;
+}
+.box--shear:before {
+  content: '';
+  position: absolute;
+  top: -70px;
+  width: 110%;
+  height: 130px;
+  background: #f2f2f2;
+  -webkit-transform: rotate(-4.5deg);
+      -ms-transform: rotate(-4.5deg);
+          transform: rotate(-4.5deg);
+  z-index: -1;
 }
 .box--angle:after {
   content: '';
   position: absolute;
-  bottom: -35px;
-  height: 167px;
-  width: 100%;
-  background: url(../img/box--angle.png) 50% 0 no-repeat;
-  background-size: cover;
   z-index: 0;
+  height: 200px;
+  width: 101%;
+  bottom: -120px;
+  background-image: linear-gradient(12deg, transparent 50%, #ffffff 50%), linear-gradient(-12deg, transparent 50%, #ffffff 50%);
+  background-size: 50% 200px;
+  background-repeat: no-repeat;
+  background-position: 0 0, 99% 0;
 }
 .box__container {
   padding: 25px;
@@ -678,9 +697,18 @@ p {
   display: block;
 }
 .features__item p {
-  padding-bottom: 15px;
+  padding-bottom: 22px;
 }
 .features__caption {
+  display: block;
   font-size: 18px;
-  line-height: 1.125;
+  line-height: 21px;
+  padding-bottom: 13px;
+}
+.reviews {
+  margin: 0;
+  text-align: center;
+}
+.reviews__text {
+  line-height: 30px;
 }
