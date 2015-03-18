@@ -1,49 +1,49 @@
 .intro {
-	background: @base-color url(../img/bg__intro.png) 50% 0 no-repeat;
+  background: @base-color url(../img/bg__intro.png) 50% 0 no-repeat;
 
 
-	&__container {
-		position: relative;
-		padding-top: 458px;
-		text-align: center;
-	}
+  &__container {
+    position: relative;
+    padding-top: 458px;
+    text-align: center;
+  }
 
 
-	&__caption {
-		position: absolute;
-		width: 90%;
-		top: 85px;
-		margin: 0;
-		padding: 0;
-		font-size: @fz-h3;
-		line-height: 29px;
-		font-weight: @fw-light;
-		color: @white;
-	}
+  &__caption {
+    position: absolute;
+    width: 100%;
+    top: 85px;
+    margin: 0;
+    padding: 0;
+    font-size: @fz-h3;
+    line-height: 29px;
+    font-weight: @fw-light;
+    color: @white;
+  }
 
 
-	&__desc {
-		background: @base-color;
-		padding: 28px 20px 18px;
+  &__desc {
+    background: @base-color;
+    padding: 28px 0 18px;
 
-		p {
-			color: #fff;
-			letter-spacing: -0.0175em;
-		}
-	}
+    p {
+      color: #fff;
+      letter-spacing: -0.0175em;
+    }
+  }
 
 
-	&__apps-list {
-		&:extend(.clearlist);
-		padding-bottom: 22px;
+  &__apps-list {
+    &:extend(.clearlist);
+    padding-bottom: 22px;
 
-		li {
-			display: inline-block;
-			margin: 0 18px 0 15px;
+    li {
+      display: inline-block;
+      margin: 0 18px 0 15px;
 
-			img {
-				vertical-align: bottom;
-			}
-		}
-	}
+      img {
+        vertical-align: bottom;
+      }
+    }
+  }
 }

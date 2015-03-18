@@ -1,0 +1,55 @@
+.contacts {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+
+  &__caption {
+    .big-caption();
+    padding-bottom: 7px;
+  }
+  &__text {
+    position: relative;
+    text-align: center;
+    z-index: 5;
+  }
+  &__list {
+    display: inline-block;
+    text-align: center;
+    margin-top: 6px;
+
+    dt {
+      .text-font(@fz-h4, ((@lh-caption) + 1), @fw-bold);
+    }
+    dd {
+      .big-caption;
+      margin-left: 0;
+      color: @pink;
+    }
+  }
+}
+
+.contacts__map {
+  height: 225px;
+  background: @grey url(../img/map.png) 50% 75% no-repeat;
+
+  // @media (min-width: @screen-md) {
+  //   height: 370px;
+  //   background: @grey url(../img/map.png) 50% 100% no-repeat;
+}
+
+
+@media (min-width: 700px) {
+  .contacts__caption {
+    .text-font (40px, 48px, @fw-light);
+  }
+  .contacts__map {
+    height: 370px;
+    background: @grey url(../img/map.png) 50% 100% no-repeat;
+  }
+}
+
+@media (min-width: 1100px) { 
+  .contacts__caption {
+    .text-font (50px, 60px, @fw-light);
+  }
+}
