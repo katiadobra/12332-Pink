@@ -75,3 +75,21 @@
 }
 
 
+// Modal Grid
+
+.generate-md-cols(@n, @i: 1) when (@i =< @n) {
+  .col-md-@{i} {
+    width: (@i * 100% / @n);
+  }
+  .generate-md-cols(@n, (@i + 1));
+}
+
+.generate-lg-cols(@n, @i: 1) when (@i =< @n) {
+  .col-lg-@{i} {
+    width: (@i * 100% / @n);
+  }
+  .generate-lg-cols(@n, (@i + 1));
+}
+
+.generate-md-cols(12);
+.generate-lg-cols(12);
