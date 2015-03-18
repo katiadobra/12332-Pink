@@ -673,7 +673,7 @@ p {
   position: absolute;
   top: -70px;
   width: 110%;
-  height: 130px;
+  height: 150px;
   background: #f2f2f2;
   -webkit-transform: rotate(-5.6deg);
       -ms-transform: rotate(-5.6deg);
@@ -700,6 +700,13 @@ p {
     -webkit-transform: rotate(-4.4deg);
         -ms-transform: rotate(-4.4deg);
             transform: rotate(-4.4deg);
+  }
+}
+@media (min-width: 1450px) {
+  .box--shear:before {
+    -webkit-transform: rotate(-3.7deg);
+        -ms-transform: rotate(-3.7deg);
+            transform: rotate(-3.7deg);
   }
 }
 .slider__pagination {
