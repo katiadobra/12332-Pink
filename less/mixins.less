@@ -22,13 +22,6 @@
 }
 
 
-// Size
-.size(@width; @height) {
-  width: @width;
-  height: @height;
-}
-
-
 // Color
 .color (@color) {
   color: @color;
@@ -44,3 +37,24 @@
 	background: fadeout(@color, @opacity);
 }
 
+.text-font (@fz, @lh, @fw) {
+  font-size: @fz;
+  line-height: @lh;
+  font-weight: @fw;
+}
+
+.text-normal () {
+  font-size: @fz-h5;
+  line-height: @lh-base;
+  font-weight: @fw-normal;
+}
+.small-caption() {
+  font-size: @fz-h4; // ~18px
+  line-height: @lh-base; // ~24px
+  font-weight: @fw-bold;
+}
+.big-caption() {
+  font-size: @fz-h3; // ~24px
+  line-height: @lh-caption; // ~28px
+  font-weight: @fw-light;
+}

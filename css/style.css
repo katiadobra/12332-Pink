@@ -380,7 +380,7 @@ body {
   min-width: 300px;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.71428571;
+  line-height: 1.7142857;
   color: #283645;
   background-color: #ffffff;
   overflow-x: hidden;
@@ -428,7 +428,7 @@ h5,
 h6 {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.125;
+  line-height: 28px;
   color: #283645;
 }
 h1 {
@@ -487,7 +487,7 @@ p {
   }
 }
 @media (min-width: 992px) {
-  features {
+  .features {
     width: 50%;
   }
 }
@@ -509,7 +509,7 @@ p {
   background: rgba(0, 0, 0, 0.5);
 }
 .page-header__container {
-  padding: 10px 20px 16px;
+  padding: 16px 20px 20px;
 }
 .page-header__container:after {
   content: '';
@@ -523,11 +523,26 @@ p {
   line-height: 28px;
   text-align: center;
 }
+@media (min-width: 700px) {
+  .page-caption {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 300;
+    padding: 0;
+  }
+}
+@media (min-width: 1100px) {
+  .page-caption {
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 300;
+  }
+}
 .page-footer__caption {
-  padding-bottom: 10px;
   font-size: 24px;
+  line-height: 28px;
   font-weight: 300;
-  line-height: 1.125;
+  padding-bottom: 7px;
 }
 .page-footer__contacts {
   position: relative;
@@ -540,27 +555,40 @@ p {
   margin-top: 5px;
 }
 .page-footer__list dt {
-  font-weight: 700;
   font-size: 18px;
+  line-height: 29px;
+  font-weight: 700;
 }
 .page-footer__list dd {
-  margin-left: 0;
-  font-weight: 300;
   font-size: 24px;
-  line-height: 1.125;
+  line-height: 28px;
+  font-weight: 300;
+  margin-left: 0;
   color: #d22856;
 }
+.page-footer__list:last-child {
+  margin-top: 9px;
+}
 .page-footer__map {
-  height: 230px;
+  height: 225px;
   background: #f2f2f2 url(../img/map.png) 50% 75% no-repeat;
 }
-@media (min-width: 992px) {
+@media (min-width: 700px) {
   .page-footer__caption {
     font-size: 40px;
+    line-height: 48px;
+    font-weight: 300;
   }
   .page-footer__map {
     height: 370px;
     background: #f2f2f2 url(../img/map.png) 50% 100% no-repeat;
+  }
+}
+@media (min-width: 1100px) {
+  .page-footer__caption {
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 300;
   }
 }
 .logo {
@@ -638,10 +666,7 @@ p {
 }
 .box--shear {
   background: #f2f2f2;
-  margin-top: 80px;
-}
-.box--shear .box__container {
-  margin-top: -31px;
+  margin-top: 107px;
 }
 .box--shear:before {
   content: '';
@@ -650,9 +675,9 @@ p {
   width: 110%;
   height: 130px;
   background: #f2f2f2;
-  -webkit-transform: rotate(-4.5deg);
-      -ms-transform: rotate(-4.5deg);
-          transform: rotate(-4.5deg);
+  -webkit-transform: rotate(-5.6deg);
+      -ms-transform: rotate(-5.6deg);
+          transform: rotate(-5.6deg);
   z-index: -1;
 }
 .box--angle:after {
@@ -661,7 +686,7 @@ p {
   z-index: 0;
   height: 200px;
   width: 101%;
-  bottom: -120px;
+  bottom: -117px;
   background-image: linear-gradient(12deg, transparent 50%, #ffffff 50%), linear-gradient(-12deg, transparent 50%, #ffffff 50%);
   background-size: 50% 200px;
   background-repeat: no-repeat;
@@ -670,10 +695,31 @@ p {
 .box__container {
   padding: 25px;
 }
-@media (min-width: 992px) {
-  .box--angle:after {
-    bottom: -60px;
+@media (min-width: 700px) {
+  .box--shear:before {
+    -webkit-transform: rotate(-4.4deg);
+        -ms-transform: rotate(-4.4deg);
+            transform: rotate(-4.4deg);
   }
+}
+.slider__pagination {
+  text-align: center;
+  padding: 16px 0;
+}
+.slider__pagination i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 7px;
+  background: #bec2c7;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.slider__pagination .active {
+  width: 12px;
+  height: 12px;
+  border: 3px solid #283645;
+  background-color: #ffffff;
 }
 .price-table__caption {
   background: #283645;
@@ -692,6 +738,7 @@ p {
 }
 .features {
   text-align: center;
+  margin-top: -58px;
 }
 .features__item {
   display: block;
@@ -708,6 +755,14 @@ p {
 .reviews {
   margin: 0;
   text-align: center;
+}
+.reviews__author {
+  font-size: 18px;
+  line-height: 1.7142857;
+  font-weight: 700;
+  display: block;
+  font-style: normal;
+  padding-bottom: 13px;
 }
 .reviews__text {
   line-height: 30px;
