@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
   <title>HTML Academy: Pink</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
@@ -10,7 +10,7 @@
 <body>
 <div class="page-wrap">
   <header class="page-header">
-<!--     <div class="container"> -->
+    <div class="container">
       <div class="row">
         <div class="col-md-4">
           <h1 class="logo">
@@ -21,6 +21,8 @@
           </h1>
           <a class="nav-toggle  js-nav-toggle" title="Меню"><span>Меню</span></a>
         </div>
+      </div>
+    </div>
 <!--         <div class="col-md-8"> -->
           <div class="page-header__nav-wrap">
             <nav class="main-nav">
@@ -32,9 +34,6 @@
               </ul>
             </nav>
           </div>
-<!--         </div> -->
-      </div>
-<!--     </div> -->
   </header>
 
   <div class="intro">
@@ -75,23 +74,52 @@
       <div class="box box--shear">
         <div class="container">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-sm-6 col-md-12">
               <div class="box__container">
-                <ul class="features">
-                  <li class="features__item">
-                    <strong class="features__caption">Поднимает настроение</strong>
-                    <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-                  </li>
-                  <li class="features__item">
-                    <strong class="features__caption">Меняет мир вокруг</strong>
-                    <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-                  </li>
-                  <li class="features__item">
-                    <strong class="features__caption">Заводит новых друзей</strong>
-                    <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-                  </li>
-                </ul>
+                <div class="features">
+                  <div class="col-md-4">
+                    <div class="features__item">
+                      <strong class="features__caption">Поднимает настроение</strong>
+                      <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="features__item">
+                      <strong class="features__caption">Меняет мир вокруг</strong>
+                      <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="features__item">
+                      <strong class="features__caption">Заводит новых друзей</strong>
+                      <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 visible-xs visible-sm">
+              <div class="features__mob-img">
                 <img src="img/mob.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="effect">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 hidden-xs">
+              <div class="effect__timer">
+                <img src="img/smiley-1.svg" alt="">
+              </div>
+            </div>
+            <div class="col-sm-6 hidden-xs">
+              <div class="effect__text">
+                <h2 class="effect__caption">Эффект на 24 часа!</h2>
+                <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+                <a href="#">Узнать больше об исследовании</a>
               </div>
             </div>
           </div>
@@ -140,7 +168,7 @@
             <div class="slide active">
               <table class="price-table">
                 <tr>
-                  <th colspan="2" class="price-table__caption">Стандарт <span>3,99 USD</span></th>
+                  <th colspan="2" class="price-table__caption price-table__caption--flag">Стандарт <span>3,99 USD</span></th>
                 </tr>
                 <tr>
                   <td>Розовый фильтр</td>
@@ -176,10 +204,46 @@
               </table>
             </div> -->
           </div>
-          <div class="slider__pagination">
+          <div class="slider__pagination visible-xs">
             <i></i>
             <i class="active"></i>
             <i></i>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 hidden-xs">
+              <table class="price-table price-table--big">
+                <col width="25%">
+                <col width="25%">
+                <col width="25%">
+                <col width="25%">
+                <tr>
+                  <th class="price-table__caption--null"></th>
+                  <th class="price-table__caption">База<span>1,99 USD</span></th>
+                  <th class="price-table__caption price-table__caption--flag">Стандарт <span>3,99 USD</span></th>
+                  <th class="price-table__caption">Анлим <span>9,99 USD</span></th>
+                </tr>
+                <tr>
+                  <td>Розовый фильтр</td>
+                  <td><span class="check"><i class="checked">есть</i></span></td>
+                  <td><span class="check"><i class="checked">есть</i></span></td>
+                  <td><span class="check"><i class="checked">есть</i></span></td>
+                </tr>
+                <tr>
+                  <td>Смайлики</td>
+                  <td><span class="check"><i class="checked">есть</i></span></td>
+                  <td><span class="check"><i>нет</i></span></td>
+                  <td><span class="check"><i>нет</i></span></td>
+                </tr>
+                <tr>
+                  <td>Комментарии</td>
+                  <td><span class="check"><i class="checked">есть</i></span></td>
+                  <td><span class="check"><i>нет</i></span></td>
+                  <td><span class="check"><i>нет</i></span></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -246,6 +310,22 @@
     </footer>
 
   </div>
-
+  <!-- <script src="js/script.js"></script> -->
+        <!-- PixLayout -->
+  <script src="assets/jquery.js"></script>
+  <script src="assets/jquery.pixlayout.js"></script>
+  <script>
+    $(function(){
+      $.pixlayout({
+        src: "assets/mob-index.jpg",
+        opacity: 0.4,
+        top: -2,
+        center: true,
+        clip: true,
+        show: true,
+      })
+    });
+  </script>
+  <!-- / PixLayout -->
 </body>
 </html>
