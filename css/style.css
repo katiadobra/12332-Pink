@@ -1239,6 +1239,7 @@ th {
   clear: both;
 }
 .clearlist,
+.page-header.open .main-nav > ul,
 .intro__apps-list,
 .features {
   list-style: none;
@@ -1275,6 +1276,9 @@ textarea {
 }
 img {
   vertical-align: middle;
+}
+.page-main {
+  overflow: hidden;
 }
 a {
   color: #d22856;
@@ -1348,6 +1352,13 @@ p {
   display: table-row;
   height: 1px;
 }
+.page-caption {
+  padding: 16px 0;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  text-align: center;
+}
 .page-header {
   background: rgba(0, 0, 0, 0.5);
 }
@@ -1367,12 +1378,79 @@ p {
   display: table;
   clear: both;
 }
-.page-caption {
-  padding: 16px 0;
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 28px;
+.main-nav {
+  display: none;
+}
+.page-header.open {
+  background: #283645;
+}
+.page-header.open .main-nav {
+  display: block;
+  float: left;
+  width: 100%;
+}
+.page-header.open .main-nav > ul {
+  margin-top: 5px;
   text-align: center;
+}
+.page-header.open .main-nav > ul li {
+  border-bottom: 1px solid #000000;
+  padding: 17px 10px;
+  box-shadow: 0 1px 0 #485562 inset, 0 -1px 0 #000000;
+}
+.page-header.open .main-nav > ul li > a,
+.page-header.open .main-nav > ul li > span {
+  font-size: 18px;
+  line-height: 1.7142857;
+  font-weight: 700;
+  padding: 14px 0;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.page-header.open .main-nav > ul li > a:hover,
+.page-header.open .main-nav > ul li > span:hover,
+.page-header.open .main-nav > ul li > a:focus,
+.page-header.open .main-nav > ul li > span:focus,
+.page-header.open .main-nav > ul li > a.active,
+.page-header.open .main-nav > ul li > span.active {
+  text-decoration: none;
+  border-bottom: 2px solid #ffffff;
+}
+.page-header.open .main-nav > ul li > a.active,
+.page-header.open .main-nav > ul li > span.active {
+  cursor: default;
+}
+.page-header.open .main-nav > ul li > a:active,
+.page-header.open .main-nav > ul li > span:active {
+  opacity: .3;
+  border-bottom: 0;
+}
+.nav-toggle {
+  position: absolute;
+  top: 21px;
+  right: 37px;
+  padding: 10px 48px 16px 0px;
+  color: transparent;
+  font: 0/0 a;
+  cursor: pointer;
+}
+.nav-toggle span,
+.nav-toggle span:before,
+.nav-toggle span:after {
+  cursor: pointer;
+  height: 4px;
+  width: 50px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+.nav-toggle span:before {
+  top: -10px;
+}
+.nav-toggle span:after {
+  bottom: -10px;
 }
 @media (min-width: 700px) {
   .page-caption {
@@ -1389,9 +1467,12 @@ p {
     font-weight: 300;
   }
 }
+.page-footer {
+  overflow: hidden;
+}
 .logo {
   float: left;
-  margin: 0;
+  margin: 0 0 0 15px;
   padding: 16px 5px 21px;
 }
 .btn {
@@ -1484,15 +1565,15 @@ p {
   position: absolute;
   z-index: 0;
   height: 200px;
-  width: 101%;
+  width: 100%;
   bottom: -115px;
   background-image: linear-gradient(12deg, transparent 50%, #ffffff 50%), linear-gradient(-12deg, transparent 50%, #ffffff 50%);
   background-size: 50% 200px;
   background-repeat: no-repeat;
-  background-position: 0 0, 99% 0;
+  background-position: 0 0, 100% 0;
 }
 .box__container {
-  padding: 25px;
+  padding: 25px 0;
 }
 @media (min-width: 700px) {
   .box--shear:before {
@@ -1521,11 +1602,19 @@ p {
   border-radius: 50%;
   vertical-align: middle;
 }
-.slider__pagination .active {
+.slider__pagination i:hover,
+.slider__pagination i:focus {
+  background: #7e868f;
+}
+.slider__pagination i:active {
+  background: #e9ebec;
+}
+.slider__pagination i .active {
   width: 12px;
   height: 12px;
   border: 3px solid #283645;
   background-color: #ffffff;
+  cursor: default;
 }
 .price-table__caption {
   background: #283645;

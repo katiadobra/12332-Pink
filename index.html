@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <title>HTML Academy: Pink</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
@@ -9,20 +10,20 @@
 <body>
 <div class="page-wrap">
   <header class="page-header">
-    <div class="container">
+<!--     <div class="container"> -->
       <div class="row">
-        <div class="col-xs-3">
+        <div class="col-md-4">
           <h1 class="logo">
             <a href="index.html">
             <img src="img/pink-logo-mob.png" alt="Pink">
     <!--    <img src="img/logo.svg" height="24" width="74" alt="Pink"> -->
             </a>
           </h1>
+          <a class="nav-toggle  js-nav-toggle" title="Меню"><span>Меню</span></a>
         </div>
-        <div class="col-xs-9">
+<!--         <div class="col-md-8"> -->
           <div class="page-header__nav-wrap">
-            <a class="nav-toggle  js-nav-toggle" title="Меню">Меню</a>
-            <nav class="main-nav" style="display: none;">
+            <nav class="main-nav">
               <ul>
                 <li class="active"><a href="#">Информация</a></li>
                 <li><a href="javascript:void(0);">Возможности</a></li>
@@ -31,9 +32,9 @@
               </ul>
             </nav>
           </div>
-        </div>
+<!--         </div> -->
       </div>
-    </div>
+<!--     </div> -->
   </header>
 
   <div class="intro">
@@ -245,22 +246,6 @@
     </footer>
 
   </div>
-  <!-- <script src="js/script.js"></script> -->
-        <!-- PixLayout -->
-  <script src="assets/jquery.js"></script>
-  <script src="assets/jquery.pixlayout.js"></script>
-  <script>
-    $(function(){
-      $.pixlayout({
-        src: "assets/mob-index.jpg",
-        opacity: 0.4,
-        top: -2,
-        center: true,
-        clip: true,
-        show: true,
-      })
-    });
-  </script>
-  <!-- / PixLayout -->
+
 </body>
 </html>

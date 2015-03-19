@@ -1,3 +1,12 @@
+.page-caption {
+  padding: 16px 0;
+  font-size: @fz-page-caption;
+  font-weight: @fw-light;
+  line-height: 28px;
+  text-align: center;
+}
+
+
 .page-header {
   .bg(#000,50%);
 
@@ -8,12 +17,86 @@
   }
 }
 
-.page-caption {
-  padding: 16px 0;
-  font-size: @fz-page-caption;
-  font-weight: @fw-light;
-  line-height: 28px;
-  text-align: center;
+.main-nav {
+  display: none;
+}
+
+.page-header.open {
+  background: @base-color;
+
+  .main-nav {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+
+  .main-nav > ul {
+    &:extend(.clearlist);
+    margin-top: 5px;
+    text-align: center;
+    
+    li {
+      border-bottom: 1px solid @grey-base;
+      padding: 17px 10px;
+      box-shadow: 0 1px 0 desaturate(lighten(@dark-blue, 12%), 11%) inset, 0 -1px 0 @grey-base;
+    } 
+
+    li > a,
+    li > span {
+      .small-caption;
+      padding: 14px 0;
+      color: @white;
+      text-align: center;
+      text-transform: uppercase;
+
+
+      &:hover,
+      &:focus,
+      &.active {
+        text-decoration: none;
+        border-bottom: 2px solid @white;
+      }
+
+      &.active {
+        cursor: default;
+      }
+
+      &:active {
+        opacity: .3;
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.nav-toggle {
+  position: absolute;
+  top: 21px;
+  right: 37px;
+  padding: 10px 48px 16px 0px;
+  color: transparent;
+  font: 0/0 a;
+  cursor: pointer;
+  
+  span, 
+  span:before, 
+  span:after {
+    cursor: pointer;
+    height: 4px;
+    width: 50px;
+    background: white;
+    position: absolute;
+    display: block;
+    content: '';
+  }
+
+  span:before {
+    top: -10px; 
+  }
+
+  span:after {
+    bottom: -10px;
+  }
 }
 
 @media (min-width: 700px) { 
