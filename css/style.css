@@ -1398,8 +1398,8 @@ p {
   padding: 17px 10px;
   box-shadow: 0 1px 0 #485562 inset, 0 -1px 0 #000000;
 }
-.page-header.open .main-nav > ul li > a,
-.page-header.open .main-nav > ul li > span {
+.page-header .main-nav > ul li > a,
+.page-header .main-nav > ul li > span {
   font-size: 18px;
   line-height: 1.7142857;
   font-weight: 700;
@@ -1407,24 +1407,25 @@ p {
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
+  border-bottom: 2px solid transparent;
 }
-.page-header.open .main-nav > ul li > a:hover,
-.page-header.open .main-nav > ul li > span:hover,
-.page-header.open .main-nav > ul li > a:focus,
-.page-header.open .main-nav > ul li > span:focus,
-.page-header.open .main-nav > ul li > a.active,
-.page-header.open .main-nav > ul li > span.active {
+.page-header .main-nav > ul li > a:hover,
+.page-header .main-nav > ul li > span:hover,
+.page-header .main-nav > ul li > a:focus,
+.page-header .main-nav > ul li > span:focus,
+.page-header .main-nav > ul li > a.active,
+.page-header .main-nav > ul li > span.active {
   text-decoration: none;
   border-bottom: 2px solid #ffffff;
 }
-.page-header.open .main-nav > ul li > a.active,
-.page-header.open .main-nav > ul li > span.active {
+.page-header .main-nav > ul li > a.active,
+.page-header .main-nav > ul li > span.active {
   cursor: default;
 }
-.page-header.open .main-nav > ul li > a:active,
-.page-header.open .main-nav > ul li > span:active {
+.page-header .main-nav > ul li > a:active,
+.page-header .main-nav > ul li > span:active {
   opacity: .3;
-  border-bottom: 0;
+  border-bottom: 2px solid transparent;
 }
 .nav-toggle {
   position: absolute;
@@ -1458,6 +1459,26 @@ p {
     line-height: 48px;
     font-weight: 300;
     padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  .nav-toggle {
+    display: none;
+  }
+  .main-nav {
+    display: block;
+  }
+  .main-nav ul {
+    display: block;
+  }
+  .main-nav ul > li {
+    display: inline-block;
+  }
+  .main-nav ul > li > a {
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 4px 35px;
   }
 }
 @media (min-width: 1100px) {
@@ -1666,9 +1687,7 @@ p {
 .price-table th {
   width: 25%;
   border-right: 2px solid #ffffff;
-}
-.price-table th:last-child {
-  border-right: none;
+  border-left: 2px solid #ffffff;
 }
 .price-table td {
   border: 2px solid #f2f2f2;
@@ -1680,10 +1699,11 @@ p {
   vertical-align: middle;
 }
 .price-table td .check {
+  float: right;
   color: transparent;
   font: 0/0 a;
 }
-.price-table td .check > i {
+.price-table .check > i {
   display: block;
   position: relative;
   width: 30px;
@@ -1691,12 +1711,12 @@ p {
   margin: auto;
   vertical-align: middle;
 }
-.price-table td .check > i:before,
-.price-table td .check > i:after {
+.price-table .check > i:before,
+.price-table .check > i:after {
   content: '';
   position: absolute;
 }
-.price-table td .check > i:before {
+.price-table .check > i:before {
   top: 13px;
   left: 4px;
   width: 35px;
@@ -1706,7 +1726,7 @@ p {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.price-table td .check > i:after {
+.price-table .check > i:after {
   top: 13px;
   left: 3px;
   width: 35px;
@@ -1716,7 +1736,7 @@ p {
       -ms-transform: rotate(-135deg);
           transform: rotate(-135deg);
 }
-.price-table td .check > i.checked:after {
+.price-table .check > i.checked:after {
   top: 14px;
   left: 12px;
   width: 28px;
@@ -1726,7 +1746,7 @@ p {
       -ms-transform: rotate(-47deg);
           transform: rotate(-47deg);
 }
-.price-table td .check > i.checked:before {
+.price-table .check > i.checked:before {
   top: 19px;
   left: 4px;
   width: 15px;
@@ -1738,6 +1758,12 @@ p {
 }
 .price-table--big td {
   text-transform: none;
+}
+.price-table--big th:first-child {
+  border-left: none;
+}
+.price-table--big th:last-child {
+  border-right: none;
 }
 .features {
   text-align: center;
@@ -1814,7 +1840,7 @@ p {
 }
 .contacts__map {
   height: 225px;
-  background: #f2f2f2 url(../img/map.png) 50% 75% no-repeat;
+  background: #f2f2f2 url(../img/map.png) 50% 63% no-repeat;
 }
 @media (min-width: 700px) {
   .contacts__caption {
