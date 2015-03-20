@@ -1544,6 +1544,7 @@ p {
 .intro__desc {
   background: #283645;
   padding: 28px 0 18px;
+  text-align: center;
 }
 .intro__desc p {
   color: #fff;
