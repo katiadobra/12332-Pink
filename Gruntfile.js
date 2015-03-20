@@ -9,9 +9,13 @@ module.exports = function(grunt) {
     notify: {
       less: {
         options: {
-          title: 'Task Complete',  // optional 
+          title: 'Complete',  // optional 
           message: 'LESS finished running' //required 
         }
+      },
+      svg: {
+        title: 'svg task complete',  // optional 
+        message: 'SVG done' //required 
       }
     },
 
@@ -67,6 +71,44 @@ module.exports = function(grunt) {
       }
     },
 
+    // SVG
+
+    grunticon: {
+      makesvg: {
+        files: [{
+          expand: true, //
+          cwd: 'assets/img',
+          src: ['*.svg', '*.png'], // old files
+          dest: 'svg' // new files
+        }],
+        options: {
+          enhanceSVG: true, // style and animate with CSS or add interactivity with JS
+        
+        // имена CSS-файлов
+          datasvgcss : 'css/grunticon-icons.data.svg.css', 
+          datapngcss : 'css/grunticon-icons.data.png.css',
+          urlpngcss : 'css/grunticon-icons.fallback.css',
+
+        // имя HTML-файла с предварительным просмотром всех иконок
+          previewhtml : '_grunticon-preview.html',
+
+        // имя папки, в которую будут записаны PNG
+          pngfolder : 'img/svg/png-grunticon',
+
+        // префикс для CSS-классов
+          cssprefix: "icon-",
+
+          pngpath : '../img/svg/png-grunticon',
+          template : 'assets/_svg/_template.hbs',
+
+        // ширина и высота по умолчанию, либо указывать вручную в css
+          defaultWidth : '20px',
+          defaultHeight: '20px'
+        }
+      }
+    },
+
+    // Watch 
 
     watch: {
       less: {
@@ -89,6 +131,7 @@ module.exports = function(grunt) {
 
 
 
+    // Tasks
 
   grunt.registerTask('style', [
     'less',
@@ -97,5 +140,12 @@ module.exports = function(grunt) {
     'notify:less'
   ]);
 
-  grunt.registerTask('lint', ['lintspaces']);
+  grunt.registerTask('lint', [
+    'lintspaces'
+  ]);
+
+  grunt.registerTask('svg', [
+    'grunticon'
+    // 'notify:svg'
+  ]);
 };
