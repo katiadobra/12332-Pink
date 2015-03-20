@@ -1525,6 +1525,9 @@ p {
 .intro {
   background: #283645 url(../img/bg__intro.png) 50% 0 no-repeat;
 }
+.intro__bg-img {
+  background: url(../img/bg__intro--hand.png) no-repeat 0 119%;
+}
 .intro__container {
   position: relative;
   padding-top: 458px;
