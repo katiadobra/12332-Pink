@@ -1,6 +1,5 @@
 .btn {
   display: inline-block;
-  min-width: 281px;
   padding: 8px 25px 11px;
   margin-bottom: 31px;
   font-size: @fz-large;
@@ -27,5 +26,26 @@
     .color(@pink, 70%);
     background: @white;
     text-decoration: none;
+  }
+
+  &--fixed {
+    width: 100%;
+    max-width: 281px;
+  }
+}
+
+@media (min-width: 700px) {
+  .btn--fixed {
+    margin-bottom: 44px;
+  }
+}
+
+@media (min-width: 700px) {
+  .btn {
+    padding: 5px 25px 8px;
+    font-size: 21px;
+  }
+  .btn--fixed {
+    margin-bottom: 66px;
   }
 }

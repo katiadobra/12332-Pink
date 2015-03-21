@@ -1240,7 +1240,7 @@ th {
 }
 .clearlist,
 .page-header.open .main-nav > ul,
-.intro__apps-list,
+.intro-desc__apps-list,
 .features {
   list-style: none;
   padding-left: 0;
@@ -1362,6 +1362,10 @@ p {
 .page-header {
   background: rgba(0, 0, 0, 0.5);
 }
+.page-header__container {
+  max-width: 960px;
+  margin: 0 auto;
+}
 .page-header__container:before,
 .page-header__container:after {
   content: " ";
@@ -1427,7 +1431,7 @@ p {
 .nav-toggle {
   position: absolute;
   top: 21px;
-  right: 37px;
+  right: 39px;
   padding: 10px 48px 16px 0px;
   color: transparent;
   font: 0/0 a;
@@ -1474,8 +1478,10 @@ p {
   .main-nav ul > li > a {
     display: block;
     font-size: 18px;
+    font-weight: 400;
     color: #ffffff;
     padding: 4px 35px;
+    text-transform: none;
   }
 }
 @media (min-width: 1100px) {
@@ -1495,7 +1501,6 @@ p {
 }
 .btn {
   display: inline-block;
-  min-width: 281px;
   padding: 8px 25px 11px;
   margin-bottom: 31px;
   font-size: 18px;
@@ -1522,50 +1527,135 @@ p {
   background: #ffffff;
   text-decoration: none;
 }
-.intro {
-  background: #283645 url(../img/bg__intro.png) 50% 0 no-repeat;
+.btn--fixed {
+  width: 100%;
+  max-width: 281px;
 }
-.intro__bg-img {
-  background: url(../img/bg__intro--hand.png) no-repeat 0 119%;
+@media (min-width: 700px) {
+  .btn--fixed {
+    margin-bottom: 44px;
+  }
+}
+@media (min-width: 700px) {
+  .btn {
+    padding: 5px 25px 8px;
+    font-size: 21px;
+  }
+  .btn--fixed {
+    margin-bottom: 66px;
+  }
+}
+.intro {
+  position: relative;
+  background: #283645;
+  height: 729px;
+  background: url(../img/bg__intro.png) 50% 90% no-repeat;
+  background-size: cover;
 }
 .intro__container {
+  max-width: 960px;
+  height: 100%;
+  margin: auto;
   position: relative;
-  padding-top: 458px;
-  text-align: center;
+  background: url(../img/bg__intro--hand.png) no-repeat 0 173px;
 }
 .intro__caption {
   position: absolute;
-  width: 100%;
+  width: 320px;
   top: 85px;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
   color: #ffffff;
 }
-.intro__desc {
+.intro-desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: #283645;
   padding: 28px 0 18px;
   text-align: center;
 }
-.intro__desc p {
+.intro-desc__container {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+.intro-desc__container p {
   color: #fff;
   letter-spacing: -0.0175em;
 }
-.intro__apps-list {
+.intro-desc__apps-list {
   padding-bottom: 22px;
 }
-.intro__apps-list li {
+.intro-desc__apps-list li {
   display: inline-block;
   margin: 0 18px 0 15px;
 }
-.intro__apps-list li img {
+.intro-desc__apps-list li img {
   vertical-align: bottom;
 }
 @media (min-width: 700px) {
-  .intro__desc {
+  .intro__container {
+    background: url(../img/iphone-hand-2@1x.png) no-repeat 0px 100%;
+  }
+  .intro__caption {
+    width: 260px;
+    top: 203px;
+    left: 60px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .intro-desc {
+    position: absolute;
     background: transparent;
+    bottom: 81px;
+    left: 21px;
+    right: auto;
+  }
+  .intro-desc p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+  .intro-desc__apps-list {
+    padding-bottom: 37px;
+  }
+  .intro-desc__apps-list li {
+    margin: 0 10px 0 23px;
+  }
+  .btn--fixed {
+    max-width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .intro {
+    height: 854px;
+  }
+  .intro__container {
+    background: url(../img/iphone-hand-3@1x.png) no-repeat -29% 100%;
+  }
+  .intro__caption {
+    top: 218px;
+    left: 31px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .intro-desc {
+    bottom: 94px;
+    left: 0px;
+  }
+  .intro-desc__apps-list {
+    padding-bottom: 55px;
+  }
+  .intro-desc__apps-list li {
+    margin: 0 17px 0 15px;
   }
 }
 .box {
@@ -1647,8 +1737,68 @@ p {
   background-color: #ffffff;
   cursor: default;
 }
+.slider {
+  position: relative;
+}
+.slider-slides .slider__slide {
+  min-height: 303px;
+  width: 33%;
+  display: inline-block;
+  white-space: nowrap;
+  background-color: #eee;
+}
+.slider-slides {
+  width: 300%;
+  transition: -webkit-transform .8s ease;
+  transition: transform .8s ease;
+}
+.slider-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 200px;
+  height: 10px;
+  margin-left: -100px;
+  text-align: center;
+  z-index: 5;
+}
+.slider-controls label {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0 3px;
+  background: #fff;
+  border: 3px solid #fff;
+  vertical-align: top;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+input[id^="btn-"] {
+  display: none;
+}
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+  background-color: #c1c1c1;
+}
+#btn-1:checked ~ .slider-inner .slider-slides {
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0);
+}
+#btn-2:checked ~ .slider-inner .slider-slides {
+  -webkit-transform: translate(-33%);
+      -ms-transform: translate(-33%);
+          transform: translate(-33%);
+}
+#btn-3:checked ~ .slider-inner .slider-slides {
+  -webkit-transform: translate(-66%);
+      -ms-transform: translate(-66%);
+          transform: translate(-66%);
+}
 .price-table {
-  width: 90%;
+  width: 100%;
   margin: -43px auto 18px;
 }
 .price-table__caption {

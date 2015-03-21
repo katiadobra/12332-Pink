@@ -27,6 +27,7 @@
     "grunt-grunticon": "^2.1.6",
     "grunt-lintspaces": "^0.6.0",
     "grunt-notify": "^0.4.1",
+    "grunt-svgmin": "^2.0.1",
     "load-grunt-tasks": "^3.1.0"
   },
   "dependencies": {
