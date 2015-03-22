@@ -12,6 +12,11 @@
     }
   }
 
+  &__img {
+    display: none;
+    padding-bottom: 56px;
+  }
+
   &__caption {
     display: block;
     font-size: @fz-large;
@@ -27,5 +32,32 @@
     img {
       margin-bottom: -42px;
     }
+  }
+}
+
+
+@media (min-width: 700px) {
+  .pull-sm {
+    .pull-right;
+  }
+  .features {
+    text-align: left;
+  }
+  .features__item p {
+    padding-bottom: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .features__caption {
+    font-size: 30px;
+    line-height: 30px;
+    padding-bottom: 24px;
+  }
+  .features__item p {
+    font-size: 18px;
+  }
+  .features__img {
+    display: block;
   }
 }
