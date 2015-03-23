@@ -1,6 +1,30 @@
 .effect {
   padding: 72px 0;
 
+  &__timer {
+    position: relative;
+    padding-left: 16px;
+
+    span {
+      position: absolute;
+      top: 65px;
+      left: 40px;
+      display: block;
+      width: 214px;
+      height: 213px;
+      margin: auto;
+      .text-font (105px, 182px, @fw-bold);
+      text-align: center;
+      color: rgb(210, 40, 86);
+      border: 11px solid rgb(210, 40, 86);
+      border-radius: 50%;
+    }
+
+    svg {
+      fill: #eee;
+    }
+  }
+
   &__caption {
     .text-font (30px, 36px, @fw-bold);
     margin-bottom: 10px;
@@ -10,4 +34,20 @@
   &__text a {
     text-decoration: underline;
   }
+}
+
+@media (min-width: 992px) {
+  .effect__timer svg {
+    height: 360px;
+    width: 300px;
+  }
+  .effect__timer span {
+    top: 80px;
+    left: 42px;
+    width: 245px;
+    height: 245px;
+    font-size: 120px;
+    line-height: 205px;
+    border: 13px solid #d22856;
+    }
 }

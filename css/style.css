@@ -2068,6 +2068,29 @@ input[id^="btn-"] {
 .effect {
   padding: 72px 0;
 }
+.effect__timer {
+  position: relative;
+  padding-left: 16px;
+}
+.effect__timer span {
+  position: absolute;
+  top: 65px;
+  left: 40px;
+  display: block;
+  width: 214px;
+  height: 213px;
+  margin: auto;
+  font-size: 105px;
+  line-height: 182px;
+  font-weight: 700;
+  text-align: center;
+  color: #d22856;
+  border: 11px solid #d22856;
+  border-radius: 50%;
+}
+.effect__timer svg {
+  fill: #eee;
+}
 .effect__caption {
   font-size: 30px;
   line-height: 36px;
@@ -2077,6 +2100,21 @@ input[id^="btn-"] {
 }
 .effect__text a {
   text-decoration: underline;
+}
+@media (min-width: 992px) {
+  .effect__timer svg {
+    height: 360px;
+    width: 300px;
+  }
+  .effect__timer span {
+    top: 80px;
+    left: 42px;
+    width: 245px;
+    height: 245px;
+    font-size: 120px;
+    line-height: 205px;
+    border: 13px solid #d22856;
+  }
 }
 .reviews {
   margin: 0;
