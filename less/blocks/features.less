@@ -30,7 +30,7 @@
     overflow: hidden;
 
     img {
-      margin-bottom: -42px;
+      min-width: 157px;
     }
   }
 }
@@ -46,9 +46,15 @@
   .features__item p {
     padding-bottom: 25px;
   }
+  .features__mob-img img {
+    max-width: 268px;
+  }
 }
 
 @media (min-width: 992px) {
+  .features {
+    text-align: center; 
+  }
   .features__caption {
     font-size: 30px;
     line-height: 30px;
