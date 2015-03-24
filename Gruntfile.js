@@ -113,7 +113,7 @@ module.exports = function(grunt) {
         // имя папки, в которую будут записаны PNG
           pngfolder : 'png',
         // префикс для CSS-классов
-          cssprefix: "icon-",
+          cssprefix: ".icon-",
 
           pngpath : 'png-grunticon',
           template : 'svg/template.hbs',

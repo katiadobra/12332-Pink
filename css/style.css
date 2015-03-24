@@ -1589,7 +1589,7 @@ p {
 .btn {
   display: inline-block;
   padding: 8px 25px 11px;
-  margin-bottom: 31px;
+  margin-bottom: 33px;
   font-size: 18px;
   font-weight: 700;
   color: #ffffff;
@@ -1684,7 +1684,7 @@ p {
   display: inline-block;
   margin: 0 18px 0 15px;
 }
-.intro-desc__apps-list li img {
+.intro-desc__apps-list li i {
   vertical-align: bottom;
 }
 @media (min-width: 700px) {
@@ -1824,21 +1824,23 @@ p {
 .slider {
   position: relative;
 }
-.slider-slides .slider__slide {
+.slider__slide {
   min-height: 303px;
-  width: 33%;
+  width: 33.33333333333333%;
   display: inline-block;
-  white-space: nowrap;
-  background-color: #eee;
 }
-.slider-slides {
+.slider--slides {
   width: 300%;
   transition: -webkit-transform .8s ease;
   transition: transform .8s ease;
+  font-size: 0;
+}
+.slider--tables {
+  padding: 0 20px;
 }
 .slider-controls {
   position: absolute;
-  bottom: 20px;
+  bottom: 11px;
   left: 50%;
   width: 200px;
   height: 10px;
@@ -1848,11 +1850,11 @@ p {
 }
 .slider-controls label {
   display: inline-block;
-  width: 4px;
-  height: 4px;
-  margin: 0 3px;
-  background: #fff;
-  border: 3px solid #fff;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: #bec2c7;
+  border: 3px solid #f2f2f2;
   vertical-align: top;
   cursor: pointer;
   border-radius: 50%;
@@ -1864,26 +1866,35 @@ input[id^="btn-"] {
 #btn-1:checked ~ .slider-controls label[for="btn-1"],
 #btn-2:checked ~ .slider-controls label[for="btn-2"],
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
-  background-color: #c1c1c1;
+  background-color: #fff;
 }
-#btn-1:checked ~ .slider-inner .slider-slides {
+#btn-1:checked ~ .slider-inner .slider--slides {
   -webkit-transform: translate(0);
       -ms-transform: translate(0);
           transform: translate(0);
 }
-#btn-2:checked ~ .slider-inner .slider-slides {
+#btn-2:checked ~ .slider-inner .slider--slides {
   -webkit-transform: translate(-33%);
       -ms-transform: translate(-33%);
           transform: translate(-33%);
 }
-#btn-3:checked ~ .slider-inner .slider-slides {
+#btn-3:checked ~ .slider-inner .slider--slides {
   -webkit-transform: translate(-66%);
       -ms-transform: translate(-66%);
           transform: translate(-66%);
 }
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+  width: 12px;
+  height: 12px;
+  border: 3px solid #283645;
+  background-color: #ffffff;
+  cursor: default;
+}
 .price-table {
   width: 100%;
-  margin: -43px auto 18px;
+  margin: -42px auto 18px;
 }
 .price-table__caption {
   position: relative;
@@ -1924,14 +1935,16 @@ input[id^="btn-"] {
 .price-table__caption--null {
   background: transparent;
 }
+.price-table tr {
+  border-bottom: 2px solid #f2f2f2;
+}
 .price-table th {
   width: 25%;
-  border-right: 2px solid #ffffff;
-  border-left: 2px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
 }
 .price-table td {
-  border: 2px solid #f2f2f2;
-  padding: 13px 25px 16px;
+  padding: 13px 20px 16px;
   font-size: 14px;
   background: #ffffff;
   text-transform: uppercase;
@@ -2119,7 +2132,7 @@ input[id^="btn-"] {
 }
 .reviews {
   margin: 0;
-  padding-top: 18px;
+  padding-top: 14px;
   text-align: center;
 }
 .reviews__author {

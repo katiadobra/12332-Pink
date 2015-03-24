@@ -1,5 +1,5 @@
 
-icon-android-logo {
+.icon-android-logo {
   display: inline-block;
   vertical-align: middle;
   background-image: url('png-grunticon/android-logo.png');
@@ -9,7 +9,7 @@ icon-android-logo {
 }
 
 
-icon-apple-logo {
+.icon-apple-logo {
   display: inline-block;
   vertical-align: middle;
   background-image: url('png-grunticon/apple-logo.png');
@@ -19,7 +19,7 @@ icon-apple-logo {
 }
 
 
-icon-facebook {
+.icon-facebook {
   display: inline-block;
   vertical-align: middle;
   background-image: url('png-grunticon/facebook.png');
@@ -29,7 +29,7 @@ icon-facebook {
 }
 
 
-icon-glukhanko {
+.icon-glukhanko {
   display: inline-block;
   vertical-align: middle;
   background-image: url('png-grunticon/glukhanko.png');
@@ -39,7 +39,7 @@ icon-glukhanko {
 }
 
 
-icon-htmlacademy {
+.icon-htmlacademy {
   display: inline-block;
   vertical-align: middle;
   background-image: url('png-grunticon/htmlacademy.png');
@@ -49,7 +49,7 @@ icon-htmlacademy {
 }
 
 
-icon-logo-mob {
+.icon-logo-mob {
   display: inline-block;
   vertical-align: middle;
   background-image: url('png-grunticon/logo-mob.png');
@@ -59,7 +59,27 @@ icon-logo-mob {
 }
 
 
-icon-smiley-1 {
+.icon-microsoft-logo {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('png-grunticon/microsoft-logo.png');
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 2053px;
+}
+
+
+.icon-quotes {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('png-grunticon/quotes.png');
+  background-repeat: no-repeat;
+  width: 79px;
+  height: 3029px;
+}
+
+
+.icon-smiley-1 {
   display: inline-block;
   vertical-align: middle;
   background-image: url('png-grunticon/smiley-1.png');
@@ -69,7 +89,7 @@ icon-smiley-1 {
 }
 
 
-icon-timer-2 {
+.icon-timer-2 {
   display: inline-block;
   vertical-align: middle;
   background-image: url('png-grunticon/timer-2.png');
@@ -79,12 +99,32 @@ icon-timer-2 {
 }
 
 
-icon-timer-3 {
+.icon-timer-3 {
   display: inline-block;
   vertical-align: middle;
   background-image: url('png-grunticon/timer-3.png');
   background-repeat: no-repeat;
   width: 298px;
   height: 933px;
+}
+
+
+.icon-twitter {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('png-grunticon/twitter.png');
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 9461px;
+}
+
+
+.icon-youtube {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('png-grunticon/youtube.png');
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 3589px;
 }
 
