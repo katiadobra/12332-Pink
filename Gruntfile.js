@@ -84,9 +84,9 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'assets/svgs',
+          cwd: 'svgs',
           src: ['!!ai','*.svg'],
-          dest: 'assets/svgmin'
+          dest: 'svgmin'
         }]
       }
     },
@@ -95,9 +95,9 @@ module.exports = function(grunt) {
       makesvg: {
         files: [{
           expand: true, //
-          cwd: 'assets/svgmin',
-          src: ['**/*.svg', '**/*.png'], // old files
-          dest: 'assets/svg' // new files
+          // cwd: 'assets/svgmin',
+          src: ['svgmin/*.svg', '*.png'], // old files
+          dest: 'svg' // new files
         }],
         options: {
           enhanceSVG: true, // style and animate with CSS or add interactivity with JS
@@ -106,22 +106,17 @@ module.exports = function(grunt) {
           datasvgcss : 'css/grunticon-icons.data.svg.css',
           datapngcss : 'css/grunticon-icons.data.png.css',
           urlpngcss : 'css/grunticon-icons.fallback.css',
-
         // имя HTML-файла с предварительным просмотром всех иконок
           previewhtml : 'preview.html',
-
           // grunticon loader code snippet filename
           loadersnippet: "grunticon.loader.js",
-
         // имя папки, в которую будут записаны PNG
           pngfolder : 'png',
-
         // префикс для CSS-классов
           cssprefix: "icon-",
 
-          pngpath : 'svg/png-grunticon',
-          template : 'assets/template.hbs',
-
+          pngpath : 'png-grunticon',
+          template : 'svg/template.hbs',
         // ширина и высота по умолчанию, либо указывать вручную в css
           defaultWidth : '20px',
           defaultHeight: '20px',
