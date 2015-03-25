@@ -1,16 +1,38 @@
 .social {
   &:extend(.clearlist);
   margin: 10px 0;
+  text-align: center;
 
 
   &__btn {
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    border: 3px solid #e9ebec;
+    width: 51px;
+    height: 51px;
+    margin-right: 8px;
+    padding-top: 15px;
     color: transparent;
     font: 0/0 a;
+    text-align: center;
+    vertical-align: middle;
+    border: 3px solid #e9ebec;
     border-radius: 50%;
+
+
+    &:hover,
+    &:focus {
+      border-color: @base-color;
+    }
+
+    &:active {
+      opacity: .5;
+    }
+
+    &--fb {
+      padding-top: 12px;
+    }
+
+    &--youtube {
+      padding-left: 6px;
+    }
   }
 }
