@@ -1579,26 +1579,61 @@ p {
   }
   .page-header .main-nav ul > li > a,
   .page-header .main-nav ul > li > span {
+    position: relative;
     display: inline;
     font-size: 18px;
     font-weight: 400;
     color: #ffffff;
     padding: 10px 0;
     text-transform: none;
-    border-bottom: 2px solid transparent;
   }
-  .page-header .main-nav ul > li > a:hover,
-  .page-header .main-nav ul > li > a:focus,
-  .page-header .main-nav ul > li > a.active {
+  .page-header .main-nav ul > li > a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background: #ffffff;
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    transition: all .5s;
+  }
+  .page-header.open {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .page-header.open .main-nav ul > li:hover > a,
+  .page-header.open .main-nav ul > li:hover > span,
+  .page-header.open .main-nav ul > li:focus > a,
+  .page-header.open .main-nav ul > li:focus > span,
+  .page-header.open .main-nav ul > li.active > a,
+  .page-header.open .main-nav ul > li.active > span {
+    color: #ffffff;
+  }
+  .page-header .main-nav ul > li a:hover,
+  .page-header .main-nav ul > li span:hover,
+  .page-header .main-nav ul > li a:focus,
+  .page-header .main-nav ul > li span:focus,
+  .page-header .main-nav ul > li.active a,
+  .page-header .main-nav ul > li.active span {
     text-decoration: none;
     color: #ffffff;
-    border-bottom: 2px solid #ffffff;
   }
-  .page-header .main-nav ul > li > a.active {
-    cursor: default;
+  .page-header .main-nav ul > li a:hover:after,
+  .page-header .main-nav ul > li span:hover:after {
+    height: 2px;
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
+  .page-header .main-nav ul > li.active > a,
   .page-header .main-nav ul > li > a:active {
-    border-bottom: 2px solid transparent;
+    cursor: default;
+    text-decoration: none;
+    color: #ffffff;
   }
 }
 @media (min-width: 1100px) {
