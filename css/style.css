@@ -1503,8 +1503,8 @@ p {
   color: #d22856;
   text-decoration: none;
 }
-.page-header .main-nav ul > li > a,
-.page-header .main-nav ul > li > span {
+.main-nav ul > li > a,
+.main-nav ul > li > span {
   display: block;
   font-size: 18px;
   line-height: 1.7142857;
@@ -1514,12 +1514,12 @@ p {
   text-align: center;
   text-transform: uppercase;
 }
-.page-header .main-nav ul > li > a.active,
-.page-header .main-nav ul > li > span.active {
+.main-nav ul > li > a.active,
+.main-nav ul > li > span.active {
   cursor: default;
 }
-.page-header .main-nav ul > li > a:active,
-.page-header .main-nav ul > li > span:active {
+.main-nav ul > li > a:active,
+.main-nav ul > li > span:active {
   opacity: .3;
 }
 .nav-toggle {
@@ -1537,7 +1537,7 @@ p {
   cursor: pointer;
   height: 4px;
   width: 50px;
-  background: white;
+  background: #ffffff;
   position: absolute;
   display: block;
   content: '';
@@ -1560,25 +1560,25 @@ p {
   .nav-toggle {
     display: none;
   }
-  .page-header .main-nav {
+  .main-nav {
     display: table;
   }
-  .page-header .main-nav ul {
+  .main-nav ul {
     display: table-row;
     max-height: 100%;
     background: transparent;
   }
-  .page-header .main-nav ul > li {
+  .main-nav ul > li {
     display: table-cell;
     border-top: none;
     box-shadow: none;
     padding: 24px 0 29px;
   }
-  .page-header .main-nav ul > li:last-child {
+  .main-nav ul > li:last-child {
     border-bottom: none;
   }
-  .page-header .main-nav ul > li > a,
-  .page-header .main-nav ul > li > span {
+  .main-nav ul > li > a,
+  .main-nav ul > li > span {
     position: relative;
     display: inline;
     font-size: 18px;
@@ -1587,12 +1587,12 @@ p {
     padding: 10px 0;
     text-transform: none;
   }
-  .page-header .main-nav ul > li > a:after {
+  .main-nav ul > li > a:after {
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 0;
     height: 0;
     background: #ffffff;
     -webkit-transform: scale(0);
@@ -1612,25 +1612,26 @@ p {
   .page-header.open .main-nav ul > li.active > span {
     color: #ffffff;
   }
-  .page-header .main-nav ul > li a:hover,
-  .page-header .main-nav ul > li span:hover,
-  .page-header .main-nav ul > li a:focus,
-  .page-header .main-nav ul > li span:focus,
-  .page-header .main-nav ul > li.active a,
-  .page-header .main-nav ul > li.active span {
+  .main-nav ul > li a:hover,
+  .main-nav ul > li span:hover,
+  .main-nav ul > li a:focus,
+  .main-nav ul > li span:focus,
+  .main-nav ul > li.active a,
+  .main-nav ul > li.active span {
     text-decoration: none;
     color: #ffffff;
   }
-  .page-header .main-nav ul > li a:hover:after,
-  .page-header .main-nav ul > li span:hover:after {
+  .main-nav ul > li a:hover:after,
+  .main-nav ul > li span:hover:after {
+    width: 100%;
     height: 2px;
     opacity: 1;
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1);
   }
-  .page-header .main-nav ul > li.active > a,
-  .page-header .main-nav ul > li > a:active {
+  .main-nav ul > li.active > a,
+  .main-nav ul > li > a:active {
     cursor: default;
     text-decoration: none;
     color: #ffffff;
