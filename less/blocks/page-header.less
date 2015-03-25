@@ -67,7 +67,7 @@
 }
 
 
-.page-header{
+// .page-header{
 
   .main-nav ul {
 
@@ -90,7 +90,7 @@
       }
     }
   }
-}
+// }
 
 .nav-toggle {
   position: absolute;
@@ -134,26 +134,26 @@
   .nav-toggle {
     display: none;
   }
-  .page-header .main-nav {
+  .main-nav {
     display: table;
   }
-  .page-header .main-nav ul {
+  .main-nav ul {
     &:extend(.clearlist);
     display: table-row;
     max-height: 100%;
     background: transparent;
   }
-  .page-header .main-nav ul > li {
+  .main-nav ul > li {
     display: table-cell;
     border-top: none;
     box-shadow: none;
     padding: 24px 0 29px;
   }
-  .page-header .main-nav ul > li:last-child {
+  .main-nav ul > li:last-child {
     border-bottom: none;
   }
-  .page-header .main-nav ul > li > a,
-  .page-header .main-nav ul > li > span {
+  .main-nav ul > li > a,
+  .main-nav ul > li > span {
     position: relative;
     display: inline;
     font-size: 18px;
@@ -164,7 +164,7 @@
     // border-bottom: 2px solid transparent; 
   }
   
-  .page-header .main-nav ul > li > a:after {
+  .main-nav ul > li > a:after {
     content: '';
     position: absolute;
     left: 0;
@@ -188,26 +188,26 @@
       color: @white;
   }
 
-  .page-header .main-nav ul > li a:hover,
-  .page-header .main-nav ul > li span:hover,
-  .page-header .main-nav ul > li a:focus,
-  .page-header .main-nav ul > li span:focus,
-  .page-header .main-nav ul > li.active a,
-  .page-header .main-nav ul > li.active span {
+  .main-nav ul > li a:hover,
+  .main-nav ul > li span:hover,
+  .main-nav ul > li a:focus,
+  .main-nav ul > li span:focus,
+  .main-nav ul > li.active a,
+  .main-nav ul > li.active span {
     text-decoration: none;
     color: @white;
     // border-bottom: 2px solid @white;
   }
-  .page-header .main-nav ul > li a:hover:after,
-  .page-header .main-nav ul > li span:hover:after {
+  .main-nav ul > li a:hover:after,
+  .main-nav ul > li span:hover:after {
     height: 2px;
     opacity: 1;
     transform: scale(1);
   }
 
 
-  .page-header .main-nav ul > li.active > a,
-  .page-header .main-nav ul > li > a:active {
+  .main-nav ul > li.active > a,
+  .main-nav ul > li > a:active {
     cursor: default;
     text-decoration: none;
     color: @white;
