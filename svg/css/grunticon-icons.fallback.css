@@ -29,13 +29,33 @@
 }
 
 
+.icon-glukhanko-down {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('png-grunticon/glukhanko-down.png');
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 24677px;
+}
+
+
+.icon-glukhanko-hvr {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('png-grunticon/glukhanko-hvr.png');
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 24677px;
+}
+
+
 .icon-glukhanko {
   display: inline-block;
   vertical-align: middle;
   background-image: url('png-grunticon/glukhanko.png');
   background-repeat: no-repeat;
   width: 26px;
-  height: 24453px;
+  height: 24677px;
 }
 
 

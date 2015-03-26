@@ -111,6 +111,12 @@
     position: absolute;
     display: block;
     content: '';
+    transition: transform .5s;
+  }
+
+  span {
+    transition: background .5s;
+    transition-delay: background .5s;
   }
 
   span:before {
@@ -119,6 +125,26 @@
 
   span:after {
     bottom: -10px;
+  }
+}
+.open .nav-toggle {
+  span {
+    background: transparent;
+    transition: background 0s;
+
+    &:before {
+      transform: rotate(45deg) translate(25px, -9px);
+      height: 3px;
+      width: 29px;
+      transition: transform .5s;
+    }
+
+    &:after {
+      transform: rotate(-45deg) translate(23px, 10px);
+      height: 3px;
+      width: 29px;
+      transition: transform .5s;
+    }
   }
 }
 

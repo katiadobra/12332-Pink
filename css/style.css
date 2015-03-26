@@ -1541,12 +1541,40 @@ p {
   position: absolute;
   display: block;
   content: '';
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+}
+.nav-toggle span {
+  transition: background .5s;
+  transition-delay: background .5s;
 }
 .nav-toggle span:before {
   top: -10px;
 }
 .nav-toggle span:after {
   bottom: -10px;
+}
+.open .nav-toggle span {
+  background: transparent;
+  transition: background 0s;
+}
+.open .nav-toggle span:before {
+  -webkit-transform: rotate(45deg) translate(25px, -9px);
+      -ms-transform: rotate(45deg) translate(25px, -9px);
+          transform: rotate(45deg) translate(25px, -9px);
+  height: 3px;
+  width: 29px;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+}
+.open .nav-toggle span:after {
+  -webkit-transform: rotate(-45deg) translate(23px, 10px);
+      -ms-transform: rotate(-45deg) translate(23px, 10px);
+          transform: rotate(-45deg) translate(23px, 10px);
+  height: 3px;
+  width: 29px;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
 }
 @media (min-width: 700px) {
   .page-caption {
