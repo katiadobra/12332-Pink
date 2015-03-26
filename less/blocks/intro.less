@@ -1,0 +1,130 @@
+.intro {
+  &:extend(.clearfix);
+  position: relative;
+  background: @base-color;
+  height: 729px;
+  // padding-top: 458px;
+  background: url(../img/bg__intro.png) 50% 90% no-repeat;
+  background-size: cover;
+
+
+  &__container {
+    max-width: 960px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    background: url(../img/bg__intro--hand.png) no-repeat 0 173px;
+  }
+
+  &__caption {
+    position: absolute;
+    width: 320px;
+    top: 85px;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+    font-size: @fz-h3;
+    line-height: 29px;
+    font-weight: @fw-light;
+    color: @white;
+  }
+}
+
+
+.intro-desc {
+  &:extend(.clearfix);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: @base-color;
+  padding: 28px 0 18px;
+  text-align: center;
+
+  &__container {
+    &:extend(.clearfix);
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+    text-align: center;
+
+    p {
+      color: #fff;
+      font-weight: 300;
+    }
+  }
+
+  &__apps-list {
+    &:extend(.clearlist);
+    padding-bottom: 22px;
+
+    li {
+      display: inline-block;
+      margin: 0 18px 0 15px;
+
+      i {
+        vertical-align: bottom;
+      }
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .intro__container {
+    background: url(../img/iphone-hand-2@1x.png) no-repeat 0px 100%;
+  }
+  .intro__caption {
+    width: 260px;
+    top: 203px;
+    left: 60px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .intro-desc {
+    position: absolute;
+    background: transparent;
+    bottom: 81px;
+    left: 21px;
+    right: auto;
+  }
+  .intro-desc p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+  .intro-desc__apps-list {
+    padding-bottom: 37px;
+  }
+  .intro-desc__apps-list li {
+    margin: 0 10px 0 23px;
+  }
+  .btn--fixed {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro {
+    height: 854px;
+  }
+  .intro__container {
+    background: url(../img/iphone-hand-3@1x.png) no-repeat -29% 100%;
+  }
+  .intro__caption {
+    top: 218px;
+    left: 31px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .intro-desc {
+    bottom: 94px;
+    left: 0px;
+  }
+  .intro-desc__apps-list {
+    padding-bottom: 55px;
+  }
+  .intro-desc__apps-list li {
+    margin: 0 17px 0 15px;
+  }
+}

@@ -1,0 +1,111 @@
+.slider__pagination {
+  text-align: center;
+  padding: 14px 0;
+
+  i {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 7px;
+    background: @silver;
+    border-radius: 50%;
+    vertical-align: middle;
+
+    &:hover,
+    &:focus {
+      background: #7e868f;
+    }
+
+    &:active {
+      background: #e9ebec;
+    }
+  
+    &.active {
+      width: 12px;
+      height: 12px;
+      border: 3px solid @base-color;
+      background-color: @white;
+      cursor: default;
+    }
+  }
+}
+
+
+
+.slider {
+  position: relative;
+
+  &__slide {
+    min-height: 303px;
+    width: 33.33333333333333%;
+    display: inline-block;
+  }
+  
+  &--slides{
+    width: 300%;
+    transition: transform .8s ease;
+    font-size: 0;
+  }
+
+  &--tables {
+    padding: 0 20px;
+  }
+}
+// .slider-inner{
+//   overflow:hidden;
+// }
+
+.slider-controls {
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    width: 200px;
+    height: 10px;
+    margin-left: -100px;
+    text-align: center;
+    z-index: 5;
+  
+  label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    background: #bec2c7;
+    border: 3px solid #f2f2f2;
+    vertical-align: top;
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    transition: background-color .2s;
+  }
+}
+
+input[id^="btn-"] {
+    display: none;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+    background-color: #fff;
+}
+#btn-1:checked ~ .slider-inner  .slider--slides {
+    transform: translate(0);
+
+}
+#btn-2:checked ~ .slider-inner  .slider--slides {
+    transform: translate(-33%);
+}
+#btn-3:checked ~ .slider-inner  .slider--slides {
+    transform: translate(-66%);
+}
+#btn-1:checked ~ .slider-controls label[for="btn-1"], 
+#btn-2:checked ~ .slider-controls label[for="btn-2"], 
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+  width: 12px;
+  height: 12px;
+  border: 3px solid @base-color;
+  background-color: @white;
+  cursor: default;
+}

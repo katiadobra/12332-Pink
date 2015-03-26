@@ -1,0 +1,248 @@
+.page-caption {
+  padding: 16px 0;
+  font-size: @fz-page-caption;
+  font-weight: @fw-light;
+  line-height: 28px;
+  text-align: center;
+}
+
+
+.page-header {
+  .bg(#000,50%);
+  transition: background .4s;
+
+
+  &__container {
+    .clearfix();
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+.main-nav {
+  display: block;
+  float: left;
+  width: 100%;
+
+
+  ul {
+    &:extend(.clearlist);
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    background: #283645;
+    transition: max-height .4s;
+
+    li {
+      border-top: 1px solid @grey-base;
+      box-shadow: 0 1px 0 desaturate(lighten(@dark-blue, 12%), 11%) inset;
+
+      &:last-child {
+        border-bottom: 1px solid #000000;
+      }
+    }
+  }
+}
+
+.page-header.open {
+  background: @base-color;
+
+
+  .main-nav ul {
+    max-height: 500px;
+
+
+    > li:hover > a,
+    > li:hover > span,
+    > li:focus > a,
+    > li:focus > span,
+    > li.active > a,
+    > li.active > span {
+      color: @pink;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// .page-header{
+
+  .main-nav ul {
+
+    > li > a,
+    > li > span {
+      display: block;
+      .small-caption;
+      padding: 14px 0;
+      color: @white;
+      text-align: center;
+      text-transform: uppercase;
+
+
+      &.active {
+        cursor: default;
+      }
+
+      &:active {
+        opacity: .3;
+      }
+    }
+  }
+// }
+
+.nav-toggle {
+  position: absolute;
+  top: 21px;
+  right: 39px;
+  padding: 10px 48px 16px 0px;
+  color: transparent;
+  font: 0/0 a;
+  cursor: pointer;
+  
+  span, 
+  span:before, 
+  span:after {
+    cursor: pointer;
+    height: 4px;
+    width: 50px;
+    background: @white;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: transform .5s;
+  }
+
+  span {
+    transition: background .5s;
+    transition-delay: background .5s;
+  }
+
+  span:before {
+    top: -10px; 
+  }
+
+  span:after {
+    bottom: -10px;
+  }
+}
+.open .nav-toggle {
+  span {
+    background: transparent;
+    transition: background 0s;
+
+    &:before {
+      transform: rotate(45deg) translate(25px, -9px);
+      height: 3px;
+      width: 29px;
+      transition: transform .5s;
+    }
+
+    &:after {
+      transform: rotate(-45deg) translate(23px, 10px);
+      height: 3px;
+      width: 29px;
+      transition: transform .5s;
+    }
+  }
+}
+
+
+@media (min-width: 700px) { 
+  .page-caption {
+    .text-font (40px, 48px, @fw-light);
+    padding: 0;
+  }
+}
+ 
+@media (min-width: 992px) {
+  .nav-toggle {
+    display: none;
+  }
+  .main-nav {
+    display: table;
+  }
+  .main-nav ul {
+    &:extend(.clearlist);
+    display: table-row;
+    max-height: 100%;
+    background: transparent;
+  }
+  .main-nav ul > li {
+    display: table-cell;
+    border-top: none;
+    box-shadow: none;
+    padding: 24px 0 29px;
+  }
+  .main-nav ul > li:last-child {
+    border-bottom: none;
+  }
+  .main-nav ul > li > a,
+  .main-nav ul > li > span {
+    position: relative;
+    display: inline;
+    font-size: 18px;
+    font-weight: 400;
+    color: @white;
+    padding: 10px 0;
+    text-transform: none;
+    // border-bottom: 2px solid transparent; 
+  }
+  
+  .main-nav ul > li > a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    background: @white;
+    // transform: scale(0);
+    opacity: 0;
+    transition: all .5s;
+  }
+  .page-header.open {
+    .bg(#000,50%);
+  }
+  .page-header.open .main-nav ul > li:hover > a,
+  .page-header.open .main-nav ul > li:hover > span,
+  .page-header.open .main-nav ul > li:focus > a,
+  .page-header.open .main-nav ul > li:focus > span,
+  .page-header.open .main-nav ul > li.active > a,
+  .page-header.open .main-nav ul > li.active > span {
+      color: @white;
+  }
+
+  .main-nav ul > li a:hover,
+  .main-nav ul > li span:hover,
+  .main-nav ul > li a:focus,
+  .main-nav ul > li span:focus,
+  .main-nav ul > li.active a,
+  .main-nav ul > li.active span {
+    text-decoration: none;
+    color: @white;
+    // border-bottom: 2px solid @white;
+  }
+  .main-nav ul > li a:hover:after,
+  .main-nav ul > li span:hover:after {
+    width: 100%;
+    height: 2px;
+    opacity: 1;
+    // transform: scale(1);
+  }
+
+
+  .main-nav ul > li.active > a,
+  .main-nav ul > li > a:active {
+    cursor: default;
+    text-decoration: none;
+    color: @white;
+  }
+}
+
+@media (min-width: 1100px) {
+  .page-caption {
+    .text-font (50px, 60px, @fw-light);
+  }
+}

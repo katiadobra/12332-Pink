@@ -1,0 +1,52 @@
+.box {
+  position: relative;
+  &:extend(.clearfix);
+
+  &--shear {
+    background: @grey;
+    margin-top: 107px;
+  }
+
+  &--shear:before {
+    content: '';
+    position: absolute;
+    top: -70px;
+    width: 110%;
+    height: 150px;
+    background: #f2f2f2;
+    transform: rotate(-5.6deg);
+    z-index: -1;
+  }
+
+  &__container {
+    padding: 25px 0;
+  }
+}
+
+// svg
+.box--angle {
+  margin-bottom: -77px;
+  height: 70px;
+  fill:#fff;
+}
+
+
+@media (min-width: 700px) {
+  .box--shear:before {
+    transform: rotate(-4.4deg);
+  }
+  .box--angle {
+    margin-bottom: -150px;
+    height: 145px;
+  }
+}
+
+@media (min-width: 1450px) {
+  .box--shear:before {
+    transform: rotate(-3.7deg);
+  }
+  .box--angle {
+    margin-bottom: -255px;
+    height: 250px;
+  }
+}
