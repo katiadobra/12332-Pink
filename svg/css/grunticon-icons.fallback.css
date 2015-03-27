@@ -29,6 +29,26 @@
 }
 
 
+.icon-glasses-hvr {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('png-grunticon/glasses-hvr.png');
+  background-repeat: no-repeat;
+  width: 59px;
+  height: 8597px;
+}
+
+
+.icon-glasses {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('png-grunticon/glasses.png');
+  background-repeat: no-repeat;
+  width: 59px;
+  height: 8597px;
+}
+
+
 .icon-glukhanko-down {
   display: inline-block;
   vertical-align: middle;
@@ -59,13 +79,33 @@
 }
 
 
+.icon-htmlacademy-down {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('png-grunticon/htmlacademy-down.png');
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 9205px;
+}
+
+
+.icon-htmlacademy-hvr {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('png-grunticon/htmlacademy-hvr.png');
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 9205px;
+}
+
+
 .icon-htmlacademy {
   display: inline-block;
   vertical-align: middle;
   background-image: url('png-grunticon/htmlacademy.png');
   background-repeat: no-repeat;
   width: 26px;
-  height: 8981px;
+  height: 9205px;
 }
 
 

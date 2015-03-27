@@ -1,6 +1,9 @@
+.socials {
+  padding: 20px 0;
+}
 .social {
   &:extend(.clearlist);
-  margin: 10px 0;
+  padding: 20px 0px 0 12px;
   text-align: center;
 
 
@@ -34,5 +37,15 @@
     &--youtube {
       padding-left: 6px;
     }
+  }
+}
+
+
+@media (min-width: 992px) {
+  .socials {
+    padding: 55px 0;
+  }
+  .social {
+    padding: 22px 0px 0 0px;
   }
 }
