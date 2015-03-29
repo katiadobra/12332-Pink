@@ -115,13 +115,11 @@ module.exports = function(grunt) {
         // префикс для CSS-классов
           cssprefix: ".icon-",
 
-          pngpath : 'png-grunticon',
+          pngpath : 'svg/png',
           template : 'svg/template.hbs',
         // ширина и высота по умолчанию, либо указывать вручную в css
           defaultWidth : '20px',
-          defaultHeight: '20px',
-
-          compressPNG: true
+          defaultHeight: '20px'
         }
       }
     },

@@ -2,7 +2,7 @@
 .icon-android-logo {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/android-logo.png');
+  background-image: url('svg/png/android-logo.png');
   background-repeat: no-repeat;
   width: 42px;
   height: 8133px;
@@ -12,7 +12,7 @@
 .icon-apple-logo {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/apple-logo.png');
+  background-image: url('svg/png/apple-logo.png');
   background-repeat: no-repeat;
   width: 46px;
   height: 3829px;
@@ -22,37 +22,17 @@
 .icon-facebook {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/facebook.png');
+  background-image: url('svg/png/facebook.png');
   background-repeat: no-repeat;
   width: 16px;
   height: 4293px;
 }
 
 
-.icon-glasses-hvr {
-  display: inline-block;
-  vertical-align: middle;
-  background-image: url('png-grunticon/glasses-hvr.png');
-  background-repeat: no-repeat;
-  width: 59px;
-  height: 8597px;
-}
-
-
-.icon-glasses {
-  display: inline-block;
-  vertical-align: middle;
-  background-image: url('png-grunticon/glasses.png');
-  background-repeat: no-repeat;
-  width: 59px;
-  height: 8597px;
-}
-
-
 .icon-glukhanko-down {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/glukhanko-down.png');
+  background-image: url('svg/png/glukhanko-down.png');
   background-repeat: no-repeat;
   width: 26px;
   height: 24677px;
@@ -62,7 +42,7 @@
 .icon-glukhanko-hvr {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/glukhanko-hvr.png');
+  background-image: url('svg/png/glukhanko-hvr.png');
   background-repeat: no-repeat;
   width: 26px;
   height: 24677px;
@@ -72,7 +52,7 @@
 .icon-glukhanko {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/glukhanko.png');
+  background-image: url('svg/png/glukhanko.png');
   background-repeat: no-repeat;
   width: 26px;
   height: 24677px;
@@ -82,7 +62,7 @@
 .icon-htmlacademy-down {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/htmlacademy-down.png');
+  background-image: url('svg/png/htmlacademy-down.png');
   background-repeat: no-repeat;
   width: 26px;
   height: 9205px;
@@ -92,7 +72,7 @@
 .icon-htmlacademy-hvr {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/htmlacademy-hvr.png');
+  background-image: url('svg/png/htmlacademy-hvr.png');
   background-repeat: no-repeat;
   width: 26px;
   height: 9205px;
@@ -102,7 +82,7 @@
 .icon-htmlacademy {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/htmlacademy.png');
+  background-image: url('svg/png/htmlacademy.png');
   background-repeat: no-repeat;
   width: 26px;
   height: 9205px;
@@ -112,47 +92,87 @@
 .icon-logo-mob {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/logo-mob.png');
+  background-image: url('svg/png/logo-mob.png');
   background-repeat: no-repeat;
   width: 74px;
   height: 3221px;
 }
 
 
-.icon-logo-tablet {
+.icon-logotype-blue-2 {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/logo-tablet.png');
+  background-image: url('svg/png/logotype-blue-2.png');
   background-repeat: no-repeat;
-  width: 59px;
-  height: 8613px;
+  width: 146px;
+  height: 3877px;
+}
+
+
+.icon-logotype-blue-3 {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('svg/png/logotype-blue-3.png');
+  background-repeat: no-repeat;
+  width: 146px;
+  height: 5141px;
+}
+
+
+.icon-logotype-white-1 {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('svg/png/logotype-white-1.png');
+  background-repeat: no-repeat;
+  width: 74px;
+  height: 3253px;
+}
+
+
+.icon-logotype-white-2-hvr {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('svg/png/logotype-white-2-hvr.png');
+  background-repeat: no-repeat;
+  width: 146px;
+  height: 3877px;
+}
+
+
+.icon-logotype-white-2 {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('svg/png/logotype-white-2.png');
+  background-repeat: no-repeat;
+  width: 146px;
+  height: 3877px;
+}
+
+
+.icon-logotype-white-3 {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('svg/png/logotype-white-3.png');
+  background-repeat: no-repeat;
+  width: 146px;
+  height: 5141px;
 }
 
 
 .icon-microsoft-logo {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/microsoft-logo.png');
+  background-image: url('svg/png/microsoft-logo.png');
   background-repeat: no-repeat;
   width: 44px;
   height: 2053px;
 }
 
 
-.icon-pink-desktop {
-  display: inline-block;
-  vertical-align: middle;
-  background-image: url('png-grunticon/pink-desktop.png');
-  background-repeat: no-repeat;
-  width: 146px;
-  height: 4469px;
-}
-
-
 .icon-quotes {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/quotes.png');
+  background-image: url('svg/png/quotes.png');
   background-repeat: no-repeat;
   width: 79px;
   height: 3061px;
@@ -162,37 +182,17 @@
 .icon-smiley-1 {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/smiley-1.png');
+  background-image: url('svg/png/smiley-1.png');
   background-repeat: no-repeat;
   width: 77px;
   height: 4165px;
 }
 
 
-.icon-timer-2 {
-  display: inline-block;
-  vertical-align: middle;
-  background-image: url('png-grunticon/timer-2.png');
-  background-repeat: no-repeat;
-  width: 261px;
-  height: 1125px;
-}
-
-
-.icon-timer-3 {
-  display: inline-block;
-  vertical-align: middle;
-  background-image: url('png-grunticon/timer-3.png');
-  background-repeat: no-repeat;
-  width: 298px;
-  height: 933px;
-}
-
-
 .icon-twitter {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/twitter.png');
+  background-image: url('svg/png/twitter.png');
   background-repeat: no-repeat;
   width: 18px;
   height: 9685px;
@@ -202,7 +202,7 @@
 .icon-youtube {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png-grunticon/youtube.png');
+  background-image: url('svg/png/youtube.png');
   background-repeat: no-repeat;
   width: 16px;
   height: 3813px;
