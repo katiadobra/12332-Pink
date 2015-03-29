@@ -63,14 +63,12 @@
     text-transform: uppercase;
     line-height: 30px;
     vertical-align: middle;
-    
-    .check {
-      float: right;
-      color: transparent;
-      font: 0/0 a;
-    }
   }
-
+  .check {
+    float: right;
+    color: transparent;
+    font: 0/0 a;
+  }
   .check > i {
     display: block;
     position: relative;
@@ -123,15 +121,31 @@
 
 
 .price-table--big {
+  max-width: 620px;
+  margin: -17px auto 18px;
+
   td {
     text-transform: none;
-
-    .check {
-      float: none;
-    }
+    padding: 5px 14px 10px;
   }
 
-  th {
+  .check {
+    float: none;
+
+    i {
+      width: 43px;
+    }
+  }
+  
+  .price-table__caption {
+    font-size: 16px;
+    padding: 14px 10px;
+
+    span {
+      padding: 0;
+      font-size: 18px;
+      line-height: 24px;
+    }
 
     &:first-child {
       border-left: none;
@@ -140,4 +154,17 @@
       border-right: none;
     }
   }
+}
+
+
+@media (min-width: 700px) {
+  .price-table__caption--flag:before {
+    left: -37px;
+    top: 4px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
 }
