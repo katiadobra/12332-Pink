@@ -115,7 +115,17 @@
   background-image: url('png-grunticon/logo-mob.png');
   background-repeat: no-repeat;
   width: 74px;
-  height: 3189px;
+  height: 3221px;
+}
+
+
+.icon-logo-tablet {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('png-grunticon/logo-tablet.png');
+  background-repeat: no-repeat;
+  width: 59px;
+  height: 8613px;
 }
 
 
@@ -129,13 +139,23 @@
 }
 
 
+.icon-pink-desktop {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('png-grunticon/pink-desktop.png');
+  background-repeat: no-repeat;
+  width: 146px;
+  height: 4469px;
+}
+
+
 .icon-quotes {
   display: inline-block;
   vertical-align: middle;
   background-image: url('png-grunticon/quotes.png');
   background-repeat: no-repeat;
   width: 79px;
-  height: 3029px;
+  height: 3061px;
 }
 
 

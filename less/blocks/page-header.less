@@ -114,6 +114,22 @@
     transition: transform .5s;
   }
 
+  &:hover span, 
+  &:hover span:before, 
+  &:hover span:after,
+  &:focus span, 
+  &:focus span:before, 
+  &:focus span:after {
+    background-color: @pink;
+  }
+
+  &:active span, 
+  &:active span:before, 
+  &:active span:after {
+    .bg (@pink, 60%);
+  }
+
+
   span {
     transition: width .5s;
   }
@@ -155,7 +171,7 @@
     padding: 0;
   }
 }
- 
+
 @media (min-width: 992px) {
   .nav-toggle {
     display: none;

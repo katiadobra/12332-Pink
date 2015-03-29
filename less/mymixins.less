@@ -26,14 +26,14 @@
 .color (@color) {
   color: @color;
 }
-.color (@color, @opacity: 30%) {
+.color (@color, @opacity) {
   color: fadeout(@color, @opacity);
 }
 
 .bg (@color) {
 	background: @color;
 }
-.bg (@color, @opacity: 50%) {
+.bg (@color, @opacity) {
 	background: fadeout(@color, @opacity);
 }
 
