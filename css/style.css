@@ -1363,7 +1363,7 @@ p {
 }
 
 .box__container--price {
-	padding: 50px 0 35px;
+	padding: 41px 0 35px;
 }
 
 .box--angle {
@@ -1485,6 +1485,19 @@ input[id^="btn-"] {
 	border: 3px solid #283645;
 	background-color: #ffffff;
 	cursor: default;
+}
+
+.slick-slider {
+	padding-bottom: 30px;
+}
+
+.slick-dots {
+	bottom: -7px;
+	margin: 0;
+}
+
+.slick-dots li {
+	margin: 0px 2px;
 }
 
 .slick-dots li.slick-active button:before {
@@ -2284,6 +2297,7 @@ td.visible-sm {
 
 .box__container--price {
 	padding: 0 0 50px;
+	margin-top: -8px;
 }
 
 .price-table__caption--flag:before {
