@@ -13,9 +13,11 @@ module.exports = function(grunt) {
           message: 'LESS finished running' //required 
         }
       },
-      svg: {
-        title: 'svg task complete',  // optional 
-        message: 'SVG done' //required 
+      grunticon: {
+        options: {
+          title: 'svg task complete',  // optional 
+          message: 'SVG done' //required 
+        }
       }
     },
 
@@ -62,6 +64,13 @@ module.exports = function(grunt) {
       },
     },
     
+    cmq: {
+      style: {
+        files: {
+          'css/style.css': ['css/style.css']
+        }
+      }
+    },
 
 
     cssmin: {
@@ -108,20 +117,31 @@ module.exports = function(grunt) {
           urlpngcss : 'css/grunticon-icons.fallback.css',
         // имя HTML-файла с предварительным просмотром всех иконок
           previewhtml : 'preview.html',
-          // grunticon loader code snippet filename
+        // grunticon loader code snippet filename
           loadersnippet: "grunticon.loader.js",
         // имя папки, в которую будут записаны PNG
           pngfolder : 'png',
+            pngpath : '../png',
         // префикс для CSS-классов
           cssprefix: ".icon-",
 
-          pngpath : 'svg/png',
           template : 'svg/template.hbs',
         // ширина и высота по умолчанию, либо указывать вручную в css
           defaultWidth : '20px',
           defaultHeight: '20px'
         }
       }
+    },
+
+
+    // clean
+    clean: {
+      svg: [
+        'svgmin',
+        'svg/png',
+        'svg/css/grunticon*',
+        'svg/*.html'
+      ]
     },
 
 
@@ -153,6 +173,7 @@ module.exports = function(grunt) {
   grunt.registerTask('style', [
     'less',
     'autoprefixer',
+    'cmq',
     'cssmin',
     'notify:less'
   ]);
@@ -162,8 +183,9 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('svg', [
+    'clean:svg',
     'svgmin',
-    'grunticon'
-    // 'notify:svg'
+    'grunticon',
+    'notify:grunticon'
   ]);
 };

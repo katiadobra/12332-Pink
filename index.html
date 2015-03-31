@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="svg/css/grunticon-icons.data.svg.css">
   <!-- <link rel="stylesheet" href="svg/css/grunticon-icons.data.png.css"> -->
   <!-- <link rel="stylesheet" href="svg/css/grunticon-icons.fallback.css"> -->
+  <link rel="stylesheet" href="js/libs/slick/slick.css">
+  <link rel="stylesheet" href="js/libs/slick/slick-theme.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/grunticon.loader.js"></script>
+<!--  <script src="js/grunticon.loader.js"></script> -->
 </head>
 <body>
 <div class="page-wrap">
@@ -137,10 +139,24 @@
         </div>
       </div>
 
-      <div class="box">
+      <!-- <div class="box"> -->
         <div class="container">
-          <div class="slider slider--reviews">
-            <div class="active"> 
+          <div class="slider-slick">
+            <div>
+              <blockquote class="reviews">
+                <i class="icon-quotes" data-grunticon-embed></i>
+                <cite class="reviews__author">Николай Петров <small>25 лет, водитель трамвая</small></cite>
+                <p class="reviews__text">«Это приложение перевернуло мой&nbsp;мир и&nbsp;позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!»</p>
+              </blockquote>
+            </div>
+            <div>
+              <blockquote class="reviews">
+                <i class="icon-quotes" data-grunticon-embed></i>
+                <cite class="reviews__author">Николай Петров <small>25 лет, водитель трамвая</small></cite>
+                <p class="reviews__text">«Это приложение перевернуло мой&nbsp;мир и&nbsp;позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!»</p>
+              </blockquote>
+            </div>
+            <div>
               <blockquote class="reviews">
                 <i class="icon-quotes" data-grunticon-embed></i>
                 <cite class="reviews__author">Николай Петров <small>25 лет, водитель трамвая</small></cite>
@@ -148,13 +164,8 @@
               </blockquote>
             </div>
            </div>
-          <div class="slider__pagination">
-            <i class="active"></i>
-            <i></i>
-            <i></i>
-          </div>
         </div>
-      </div>
+      <!-- </div> -->
 
       <div class="box box--shear">
         <div class="box__container box__container--price">
@@ -332,9 +343,12 @@
     </footer>
 
   </div>
+
+  <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="js/libs/slick/slick.min.js"></script>
   <script src="js/functions.js"></script>
-        <!-- PixLayout -->
-  <script src="assets/jquery.js"></script>
+
+        <!-- PixLayout  -->
   <script src="assets/jquery.pixlayout.js"></script>
   <script>
     $(function(){
