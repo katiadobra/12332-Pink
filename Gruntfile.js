@@ -120,8 +120,8 @@ module.exports = function(grunt) {
         // grunticon loader code snippet filename
           loadersnippet: "grunticon.loader.js",
         // имя папки, в которую будут записаны PNG
-          pngfolder : 'css/png',
-            pngpath : '../css/png',
+          pngfolder : 'png',
+            pngpath : '../png',
         // префикс для CSS-классов
           cssprefix: ".icon-",
 
