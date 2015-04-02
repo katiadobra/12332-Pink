@@ -82,30 +82,33 @@ module.exports = function(grunt) {
 
 
     // SVG
-    svgmin: {
-      options: {
-        plugins: [
-          {
-            removeDesc: true
-          }
-        ]
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: 'svgs',
-          src: ['!!ai','*.svg'],
-          dest: 'svgmin'
-        }]
-      }
-    },
+    // svgmin: {
+    //   options: {
+    //     plugins: [
+    //       {
+    //         removeDesc: true
+    //       }, 
+    //       { removeViewBox: false },
+    //       { removeUselessStrokeAndFill: false },
+    //       { removeEmptyAttrs: false }  
+    //     ]
+    //   },
+    //   dist: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: 'svgs',
+    //       src: ['*.svg'],
+    //       dest: 'svgmin'
+    //     }]
+    //   }
+    // },
 
     grunticon: {
       makesvg: {
         files: [{
           expand: true, //
           // cwd: 'assets/svgmin',
-          src: ['svgmin/*.svg', '*.png'], // old files
+          src: ['svgs/*.svg', '*.png'], // old files
           dest: 'svg' // new files
         }],
         options: {
@@ -118,7 +121,7 @@ module.exports = function(grunt) {
         // имя HTML-файла с предварительным просмотром всех иконок
           previewhtml : 'preview.html',
         // grunticon loader code snippet filename
-          loadersnippet: "grunticon.loader.js",
+          loadersnippet: 'grunticon.loader.js',
         // имя папки, в которую будут записаны PNG
           pngfolder : 'png',
             pngpath : '../png',
@@ -184,7 +187,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('svg', [
     'clean:svg',
-    'svgmin',
+    // 'svgmin',
     'grunticon',
     'notify:grunticon'
   ]);
