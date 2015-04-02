@@ -110,7 +110,6 @@ input[id^="btn-"] {
 
 
 // slick slider controls
-
 .slick-slider {
   padding-bottom: 30px;
 }
@@ -132,4 +131,47 @@ input[id^="btn-"] {
   cursor: default;
   border-radius: 50%;
   opacity: 1;
+}
+
+// Arrows
+.slick-prev, 
+.slick-next {
+  display: none;
+  top: 55%;
+}
+.slick-prev {
+  left: 7px;
+}
+.slick-next {
+  right: 14px;
+}
+.slick-prev:before,
+.slick-next:before {
+  content: '';
+  display: block;
+  width: 29px;
+  height: 29px;
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+.slick-prev:before {
+  transform: rotate(45deg);
+}
+.slick-next:before {
+  transform: rotate(225deg);
+}
+
+@media (min-width: 1200px) {
+  .slick-prev, 
+  .slick-next {
+    display: block;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    border-left: 2px solid #bec2c7;
+    border-bottom: 2px solid #bec2c7;
+  }
+  .slick-slider .slick-dots {
+    display: none !important;
+  }
 }

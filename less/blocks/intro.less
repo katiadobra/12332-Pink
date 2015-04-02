@@ -1,10 +1,11 @@
 .intro {
   &:extend(.clearfix);
   position: relative;
-  background: @base-color;
+  background-color: @base-color;
   height: 729px;
-  // padding-top: 458px;
-  background: url(../img/bg__intro.png) 50% 90% no-repeat;
+  .img-retina('../img/bg1-1x.jpg';'../img/bg1-2x.jpg'; auto; 100%);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
   background-size: cover;
 
 
@@ -13,7 +14,12 @@
     height: 100%;
     margin: auto;
     position: relative;
-    background: url(../img/bg__intro--hand.png) no-repeat 50% 173px;
+    // background: url(../img/bg-hand-1x.png) no-repeat 50% 173px;
+
+    .img-retina('../img/bg-hand-1x.png';'../img/bg-hand1-2x.png'; 255px; 285px);
+      background-repeat: no-repeat;
+      background-position: 0 173px;
+      // background-size: 402px 311px;
   }
 
   &__caption {
@@ -71,8 +77,17 @@
 }
 
 @media (min-width: 700px) {
+  .intro {
+    // height: 772px;
+    .img-retina('../img/bg2-1x.jpg';'../img/bg2-2x.jpg'; 100%; auto);
+    background-position: 50% 0;
+    background-size: cover;
+  }
   .intro__container {
-    background: url(../img/iphone-hand-2-1x.png) no-repeat 0px 100%;
+    background: url(../img/2-1x.png) no-repeat 0px 100%;
+    // .img-retina('../img/bg-hand2-1x.png';'../img/bg-hand1-2x.png'; 470px; 545px);
+    // .img-retina('../img/2-1x.png';'../img/2-2x.png'; 449px; 497px);
+    // background-size: 449px 497px;
   }
   .intro__caption {
     width: 260px;
@@ -112,9 +127,13 @@
 @media (min-width: 1200px) {
   .intro {
     height: 854px;
+
+    .img-retina('../img/bg2-2x.jpg';'../img/bg__intro.png'; 100%; auto);
+    background-position: 50% 0;
+    background-size: cover;
   }
   .intro__container {
-    background: url(../img/iphone-hand-3-1x.png) no-repeat -29% 100%;
+    background: url(../img/bg-hand3-1x.png) no-repeat -29% 100%;
   }
   .intro__caption {
     top: 218px;

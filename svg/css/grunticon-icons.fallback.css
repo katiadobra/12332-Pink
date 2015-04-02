@@ -2,7 +2,7 @@
 .icon-android-logo {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/android-logo.png');
+  background-image: url('../css/png/android-logo.png');
   background-repeat: no-repeat;
   width: 42px;
   height: 8133px;
@@ -12,7 +12,7 @@
 .icon-apple-logo {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/apple-logo.png');
+  background-image: url('../css/png/apple-logo.png');
   background-repeat: no-repeat;
   width: 46px;
   height: 3829px;
@@ -22,7 +22,7 @@
 .icon-facebook {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/facebook.png');
+  background-image: url('../css/png/facebook.png');
   background-repeat: no-repeat;
   width: 16px;
   height: 4293px;
@@ -32,7 +32,7 @@
 .icon-glukhanko-down {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/glukhanko-down.png');
+  background-image: url('../css/png/glukhanko-down.png');
   background-repeat: no-repeat;
   width: 26px;
   height: 24677px;
@@ -42,7 +42,7 @@
 .icon-glukhanko-hvr {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/glukhanko-hvr.png');
+  background-image: url('../css/png/glukhanko-hvr.png');
   background-repeat: no-repeat;
   width: 26px;
   height: 24677px;
@@ -52,7 +52,7 @@
 .icon-glukhanko {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/glukhanko.png');
+  background-image: url('../css/png/glukhanko.png');
   background-repeat: no-repeat;
   width: 26px;
   height: 24677px;
@@ -62,7 +62,7 @@
 .icon-htmlacademy-down {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/htmlacademy-down.png');
+  background-image: url('../css/png/htmlacademy-down.png');
   background-repeat: no-repeat;
   width: 26px;
   height: 9205px;
@@ -72,7 +72,7 @@
 .icon-htmlacademy-hvr {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/htmlacademy-hvr.png');
+  background-image: url('../css/png/htmlacademy-hvr.png');
   background-repeat: no-repeat;
   width: 26px;
   height: 9205px;
@@ -82,7 +82,7 @@
 .icon-htmlacademy {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/htmlacademy.png');
+  background-image: url('../css/png/htmlacademy.png');
   background-repeat: no-repeat;
   width: 26px;
   height: 9205px;
@@ -92,7 +92,7 @@
 .icon-logo-mob {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/logo-mob.png');
+  background-image: url('../css/png/logo-mob.png');
   background-repeat: no-repeat;
   width: 74px;
   height: 3221px;
@@ -102,7 +102,7 @@
 .icon-logotype-blue-2 {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/logotype-blue-2.png');
+  background-image: url('../css/png/logotype-blue-2.png');
   background-repeat: no-repeat;
   width: 146px;
   height: 3877px;
@@ -112,7 +112,7 @@
 .icon-logotype-blue-3 {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/logotype-blue-3.png');
+  background-image: url('../css/png/logotype-blue-3.png');
   background-repeat: no-repeat;
   width: 146px;
   height: 5141px;
@@ -122,7 +122,7 @@
 .icon-logotype-white-1 {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/logotype-white-1.png');
+  background-image: url('../css/png/logotype-white-1.png');
   background-repeat: no-repeat;
   width: 74px;
   height: 3253px;
@@ -132,7 +132,7 @@
 .icon-logotype-white-2-hvr {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/logotype-white-2-hvr.png');
+  background-image: url('../css/png/logotype-white-2-hvr.png');
   background-repeat: no-repeat;
   width: 146px;
   height: 3877px;
@@ -142,7 +142,7 @@
 .icon-logotype-white-2 {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/logotype-white-2.png');
+  background-image: url('../css/png/logotype-white-2.png');
   background-repeat: no-repeat;
   width: 146px;
   height: 3877px;
@@ -152,7 +152,7 @@
 .icon-logotype-white-3 {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/logotype-white-3.png');
+  background-image: url('../css/png/logotype-white-3.png');
   background-repeat: no-repeat;
   width: 146px;
   height: 5141px;
@@ -162,7 +162,7 @@
 .icon-microsoft-logo {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/microsoft-logo.png');
+  background-image: url('../css/png/microsoft-logo.png');
   background-repeat: no-repeat;
   width: 44px;
   height: 2053px;
@@ -172,7 +172,7 @@
 .icon-quotes {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/quotes.png');
+  background-image: url('../css/png/quotes.png');
   background-repeat: no-repeat;
   width: 79px;
   height: 3061px;
@@ -182,7 +182,7 @@
 .icon-smiley-1 {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/smiley-1.png');
+  background-image: url('../css/png/smiley-1.png');
   background-repeat: no-repeat;
   width: 77px;
   height: 4165px;
@@ -192,7 +192,7 @@
 .icon-twitter {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/twitter.png');
+  background-image: url('../css/png/twitter.png');
   background-repeat: no-repeat;
   width: 18px;
   height: 9685px;
@@ -202,7 +202,7 @@
 .icon-youtube {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('png/youtube.png');
+  background-image: url('../css/png/youtube.png');
   background-repeat: no-repeat;
   width: 16px;
   height: 3813px;

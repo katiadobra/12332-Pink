@@ -1269,9 +1269,11 @@ p {
 
 .intro {
 	position: relative;
-	background: #283645;
+	background-color: #283645;
 	height: 729px;
-	background: url(../img/bg__intro.png) 50% 90% no-repeat;
+	background-image: url("../img/bg1-1x.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 0;
 	background-size: cover;
 }
 
@@ -1280,7 +1282,9 @@ p {
 	height: 100%;
 	margin: auto;
 	position: relative;
-	background: url(../img/bg__intro--hand.png) no-repeat 50% 173px;
+	background-image: url("../img/bg-hand-1x.png");
+	background-repeat: no-repeat;
+	background-position: 0 173px;
 }
 
 .intro__caption {
@@ -1513,6 +1517,42 @@ input[id^="btn-"] {
 	opacity: 1;
 }
 
+.slick-prev,
+.slick-next {
+	display: none;
+	top: 55%;
+}
+
+.slick-prev {
+	left: 7px;
+}
+
+.slick-next {
+	right: 14px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	content: '';
+	display: block;
+	width: 29px;
+	height: 29px;
+	border-left: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+}
+
+.slick-prev:before {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.slick-next:before {
+	-webkit-transform: rotate(225deg);
+	-ms-transform: rotate(225deg);
+	transform: rotate(225deg);
+}
+
 .price-table {
 	width: 100%;
 	margin: -42px auto 18px;
@@ -1682,6 +1722,10 @@ input[id^="btn-"] {
 	border-right: none;
 }
 
+.price-table--big .price-table__caption--null {
+	border-left: none;
+}
+
 .features {
 	text-align: center;
 }
@@ -1780,6 +1824,7 @@ input[id^="btn-"] {
 	margin: 0 auto;
 	padding-top: 39px;
 	text-align: center;
+	background: #ffffff;
 }
 
 .reviews .icon-quotes {
@@ -1803,6 +1848,8 @@ input[id^="btn-"] {
 
 .reviews__text {
 	line-height: 30px;
+	width: 100%;
+	height: auto;
 }
 
 .contacts {
@@ -1930,6 +1977,37 @@ input[id^="btn-"] {
 	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20version%3D%221%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2226.096%22%20height%3D%2233.803%22%20viewBox%3D%220%200%2026.096%2033.803%22%20fill%3D%22%23bec2c7%22%3E%3Cpath%20d%3D%22M13.047%200L0%201.456V25.93l13.047%207.836v.037l13.05-7.872V1.558L13.046%200zm10.99%2024.745l-10.99%206.622v-7.385L6.68%2021.124v-.02l6.372-2.817v-.02.01l6.367%202.815v-.006l.01.006v-1.234l-6.367-2.813-.003.003-.007-.003v.01-.002L6.678%2019.87v-1.235l5.847-2.584-1.385-.62L6.68%2017.4v-1.234l3.076-1.36-1.385-.622-1.69.748V13.7l.305-.135-3.73-1.674%209.793-4.247v-5.56l10.99%201.322v21.34zM19.428%2017.39l-4.47-1.976-1.388.62%205.858%202.59zM19.428%2014.92l-1.694-.748-1.388.62%203.082%201.363z%22%2F%3E%3C%2Fsvg%3E');
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+
+.intro {
+	background-image: url("../img/bg1-2x.jpg");
+	background-size: auto 100%;
+}
+
+.intro__container {
+	background-image: url("../img/bg-hand1-2x.png");
+	background-size: 255px 285px;
+}
+
+}
+
+@media (min-width: 700px) and (max-width: 992px) {
+
+.col-md--pl0 {
+	padding-left: 0;
+}
+
+.logo:hover .icon-logotype-white-2 {
+	display: inline-block;
+	vertical-align: middle;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20version%3D%221%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22146.3%22%20height%3D%2240.375%22%20viewBox%3D%220%200%20146.3%2040.375%22%3E%3Cg%20fill%3D%22%23fff%22%3E%3Cpath%20d%3D%22M71.874%2018.66c0-.707.58-1.287%201.256-1.287h7.18c5.087%200%208.436%202.704%208.436%207.147v.064c0%204.86-4.057%207.373-8.854%207.373h-5.474v6.825c0%20.708-.58%201.288-1.288%201.288-.676%200-1.256-.58-1.256-1.288v-20.12zm8.114%2010.98c3.734%200%206.182-1.996%206.182-4.958v-.064c0-3.22-2.415-4.894-6.054-4.894h-5.698v9.917h5.57zM93.603%2018.5c0-.708.58-1.288%201.255-1.288.71%200%201.288.58%201.288%201.288v20.283c0%20.708-.58%201.288-1.288%201.288-.676%200-1.255-.58-1.255-1.287V18.5zM102.744%2018.532c0-.676.58-1.256%201.256-1.256h.354c.58%200%20.934.29%201.288.74l13.684%2017.45V18.468c0-.676.547-1.256%201.256-1.256.676%200%201.223.58%201.223%201.256v20.348c0%20.676-.482%201.19-1.158%201.19h-.13c-.547%200-.933-.32-1.32-.77l-13.973-17.87v17.45c0%20.676-.547%201.256-1.255%201.256-.678%200-1.225-.58-1.225-1.256V18.532zM128.174%2018.5c0-.708.58-1.288%201.256-1.288.708%200%201.287.58%201.287%201.288v12.33l12.847-13.167c.29-.257.58-.45.998-.45.676%200%201.224.61%201.224%201.255%200%20.354-.16.644-.42.9l-7.983%207.92%208.564%2010.562c.225.29.354.547.354.934%200%20.676-.578%201.288-1.286%201.288-.483%200-.806-.258-1.03-.58L135.58%2029.03l-4.86%204.86v4.894c0%20.708-.58%201.288-1.288%201.288-.677%200-1.256-.58-1.256-1.288V18.5z%22%2F%3E%3C%2Fg%3E%3Cpath%20fill%3D%22%23d22856%22%20d%3D%22M60.498%2028.32c0-.054-.01-.105-.016-.158-.006-.05-.01-.098-.02-.146-.002-.01%200-.017-.003-.025L55.286%206.65c-.36-2.347-2.593-6.65-8.6-6.65-.828%200-1.5.67-1.5%201.5s.672%201.5%201.5%201.5c4.857%200%205.576%203.73%205.64%204.143l4.767%2019.7H55.02c-.74-5.926-5.8-10.53-11.926-10.53s-11.186%204.604-11.927%2010.53H29.46c-.743-5.926-5.803-10.53-11.928-10.53S6.346%2020.917%205.604%2026.843H3.407l4.74-19.552.027-.147C8.197%206.973%208.802%203%2013.812%203c.83%200%201.5-.67%201.5-1.5s-.67-1.5-1.5-1.5c-6.006%200-8.238%204.303-8.6%206.65L.043%2027.99c-.002.01%200%20.017-.003.025-.012.05-.015.098-.02.146-.008.054-.017.105-.017.16L0%2028.343c0%20.035.008.068.01.103.004.058.007.115.017.17.01.047.023.092.036.137.014.048.026.096.044.142.018.046.042.09.064.133.022.04.043.084.068.123.026.04.057.077.086.114.03.04.06.078.093.113.032.033.067.062.102.092.038.033.075.067.116.097.04.026.082.05.123.072.04.024.082.05.127.07.05.02.1.037.152.054.035.012.067.028.104.037.008.002.015%200%20.023.003.107.023.217.04.33.04h4.104c.742%205.926%205.802%2010.53%2011.927%2010.53s11.185-4.604%2011.926-10.53h1.708c.742%205.926%205.802%2010.53%2011.927%2010.53s11.187-4.604%2011.928-10.53H59c.114%200%20.224-.017.33-.04.01-.002.016%200%20.024-.003.037-.01.07-.025.105-.037.05-.017.103-.032.15-.054.046-.02.087-.046.13-.07.04-.023.083-.046.122-.073.042-.03.08-.064.117-.098.033-.03.07-.06.1-.092.035-.035.064-.074.094-.113.03-.037.06-.074.086-.114.025-.04.045-.082.067-.124.023-.044.046-.088.064-.134.02-.046.032-.094.045-.142.013-.045.027-.09.036-.136.01-.056.014-.113.018-.17.002-.035.01-.068.01-.104.002-.008%200-.016%200-.024zM17.53%2037.375c-4.474%200-8.18-3.26-8.895-7.53-.082-.49-.135-.99-.135-1.5s.053-1.012.135-1.5c.716-4.272%204.42-7.532%208.896-7.532s8.182%203.26%208.897%207.53c.082.49.135.99.135%201.5s-.053%201.012-.135%201.5c-.715%204.273-4.42%207.532-8.896%207.532zm25.564%200c-4.475%200-8.18-3.26-8.896-7.53-.082-.49-.135-.99-.135-1.5s.053-1.012.135-1.5c.716-4.272%204.42-7.532%208.896-7.532s8.18%203.26%208.896%207.53c.082.49.135.99.135%201.5s-.053%201.012-.135%201.5c-.716%204.273-4.42%207.532-8.896%207.532z%22%2F%3E%3C%2Fsvg%3E');
+	background-repeat: no-repeat;
+	width: 146.3px;
+	height: 40.375px;
+}
+
+}
+
 @media (min-width: 700px) and (max-width: 991px) {
 
 .visible-sm {
@@ -1963,6 +2041,15 @@ td.visible-sm {
 
 .hidden-sm {
 	display: none !important;
+}
+
+}
+
+@media (min-width: 700px) and only screen and (-webkit-min-device-pixel-ratio: 2), (min-width: 700px) and only screen and (min-device-pixel-ratio: 2), (min-width: 700px) and only screen and (min-resolution: 192dpi), (min-width: 700px) and only screen and (min-resolution: 2dppx) {
+
+.intro {
+	background-image: url("../img/bg2-2x.jpg");
+	background-size: 100% auto;
 }
 
 }
@@ -2232,8 +2319,14 @@ td.visible-sm {
 	margin-bottom: 45px;
 }
 
+.intro {
+	background-image: url("../img/bg2-1x.jpg");
+	background-position: 50% 0;
+	background-size: cover;
+}
+
 .intro__container {
-	background: url(../img/iphone-hand-2-1x.png) no-repeat 0px 100%;
+	background: url(../img/2-1x.png) no-repeat 0px 100%;
 }
 
 .intro__caption {
@@ -2327,6 +2420,7 @@ td.visible-sm {
 
 .reviews {
 	padding-top: 11px;
+	padding-bottom: 25px;
 }
 
 .reviews__text {
@@ -2366,60 +2460,6 @@ td.visible-sm {
 
 .contacts .contacts__list dd {
 	line-height: 31px;
-}
-
-}
-
-@media (min-width: 700px) and (max-width: 992px) {
-
-.col-md--pl0 {
-	padding-left: 0;
-}
-
-.logo:hover .icon-logotype-white-2 {
-	display: inline-block;
-	vertical-align: middle;
-	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20version%3D%221%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22146.3%22%20height%3D%2240.375%22%20viewBox%3D%220%200%20146.3%2040.375%22%3E%3Cg%20fill%3D%22%23fff%22%3E%3Cpath%20d%3D%22M71.874%2018.66c0-.707.58-1.287%201.256-1.287h7.18c5.087%200%208.436%202.704%208.436%207.147v.064c0%204.86-4.057%207.373-8.854%207.373h-5.474v6.825c0%20.708-.58%201.288-1.288%201.288-.676%200-1.256-.58-1.256-1.288v-20.12zm8.114%2010.98c3.734%200%206.182-1.996%206.182-4.958v-.064c0-3.22-2.415-4.894-6.054-4.894h-5.698v9.917h5.57zM93.603%2018.5c0-.708.58-1.288%201.255-1.288.71%200%201.288.58%201.288%201.288v20.283c0%20.708-.58%201.288-1.288%201.288-.676%200-1.255-.58-1.255-1.287V18.5zM102.744%2018.532c0-.676.58-1.256%201.256-1.256h.354c.58%200%20.934.29%201.288.74l13.684%2017.45V18.468c0-.676.547-1.256%201.256-1.256.676%200%201.223.58%201.223%201.256v20.348c0%20.676-.482%201.19-1.158%201.19h-.13c-.547%200-.933-.32-1.32-.77l-13.973-17.87v17.45c0%20.676-.547%201.256-1.255%201.256-.678%200-1.225-.58-1.225-1.256V18.532zM128.174%2018.5c0-.708.58-1.288%201.256-1.288.708%200%201.287.58%201.287%201.288v12.33l12.847-13.167c.29-.257.58-.45.998-.45.676%200%201.224.61%201.224%201.255%200%20.354-.16.644-.42.9l-7.983%207.92%208.564%2010.562c.225.29.354.547.354.934%200%20.676-.578%201.288-1.286%201.288-.483%200-.806-.258-1.03-.58L135.58%2029.03l-4.86%204.86v4.894c0%20.708-.58%201.288-1.288%201.288-.677%200-1.256-.58-1.256-1.288V18.5z%22%2F%3E%3C%2Fg%3E%3Cpath%20fill%3D%22%23d22856%22%20d%3D%22M60.498%2028.32c0-.054-.01-.105-.016-.158-.006-.05-.01-.098-.02-.146-.002-.01%200-.017-.003-.025L55.286%206.65c-.36-2.347-2.593-6.65-8.6-6.65-.828%200-1.5.67-1.5%201.5s.672%201.5%201.5%201.5c4.857%200%205.576%203.73%205.64%204.143l4.767%2019.7H55.02c-.74-5.926-5.8-10.53-11.926-10.53s-11.186%204.604-11.927%2010.53H29.46c-.743-5.926-5.803-10.53-11.928-10.53S6.346%2020.917%205.604%2026.843H3.407l4.74-19.552.027-.147C8.197%206.973%208.802%203%2013.812%203c.83%200%201.5-.67%201.5-1.5s-.67-1.5-1.5-1.5c-6.006%200-8.238%204.303-8.6%206.65L.043%2027.99c-.002.01%200%20.017-.003.025-.012.05-.015.098-.02.146-.008.054-.017.105-.017.16L0%2028.343c0%20.035.008.068.01.103.004.058.007.115.017.17.01.047.023.092.036.137.014.048.026.096.044.142.018.046.042.09.064.133.022.04.043.084.068.123.026.04.057.077.086.114.03.04.06.078.093.113.032.033.067.062.102.092.038.033.075.067.116.097.04.026.082.05.123.072.04.024.082.05.127.07.05.02.1.037.152.054.035.012.067.028.104.037.008.002.015%200%20.023.003.107.023.217.04.33.04h4.104c.742%205.926%205.802%2010.53%2011.927%2010.53s11.185-4.604%2011.926-10.53h1.708c.742%205.926%205.802%2010.53%2011.927%2010.53s11.187-4.604%2011.928-10.53H59c.114%200%20.224-.017.33-.04.01-.002.016%200%20.024-.003.037-.01.07-.025.105-.037.05-.017.103-.032.15-.054.046-.02.087-.046.13-.07.04-.023.083-.046.122-.073.042-.03.08-.064.117-.098.033-.03.07-.06.1-.092.035-.035.064-.074.094-.113.03-.037.06-.074.086-.114.025-.04.045-.082.067-.124.023-.044.046-.088.064-.134.02-.046.032-.094.045-.142.013-.045.027-.09.036-.136.01-.056.014-.113.018-.17.002-.035.01-.068.01-.104.002-.008%200-.016%200-.024zM17.53%2037.375c-4.474%200-8.18-3.26-8.895-7.53-.082-.49-.135-.99-.135-1.5s.053-1.012.135-1.5c.716-4.272%204.42-7.532%208.896-7.532s8.182%203.26%208.897%207.53c.082.49.135.99.135%201.5s-.053%201.012-.135%201.5c-.715%204.273-4.42%207.532-8.896%207.532zm25.564%200c-4.475%200-8.18-3.26-8.896-7.53-.082-.49-.135-.99-.135-1.5s.053-1.012.135-1.5c.716-4.272%204.42-7.532%208.896-7.532s8.18%203.26%208.896%207.53c.082.49.135.99.135%201.5s-.053%201.012-.135%201.5c-.716%204.273-4.42%207.532-8.896%207.532z%22%2F%3E%3C%2Fsvg%3E');
-	background-repeat: no-repeat;
-	width: 146.3px;
-	height: 40.375px;
-}
-
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-
-.visible-md {
-	display: block !important;
-}
-
-table.visible-md {
-	display: table;
-}
-
-tr.visible-md {
-	display: table-row !important;
-}
-
-th.visible-md,
-td.visible-md {
-	display: table-cell !important;
-}
-
-.visible-md-block {
-	display: block !important;
-}
-
-.visible-md-inline {
-	display: inline !important;
-}
-
-.visible-md-inline-block {
-	display: inline-block !important;
-}
-
-.hidden-md {
-	display: none !important;
 }
 
 }
@@ -2739,6 +2779,10 @@ td.visible-md {
 	padding: 20px 10px 21px;
 }
 
+.page-footer .logo {
+	padding: 16px 0 40px;
+}
+
 .icon-logotype-white-3,
 .icon-logotype-blue-3 {
 	display: inline-block;
@@ -2812,11 +2856,16 @@ td.visible-md {
 }
 
 .social {
-	padding: 22px 0px 0 0px;
+	padding: 22px 0 0;
+}
+
+.social {
+	padding: 22px 0 0 10px;
 }
 
 .copyright {
-	padding: 28px 0 0 80px;
+	padding: 28px 0 0 10px;
+	float: right;
 }
 
 .copyright span {
@@ -2833,10 +2882,48 @@ td.visible-md {
 
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+
+.visible-md {
+	display: block !important;
+}
+
+table.visible-md {
+	display: table;
+}
+
+tr.visible-md {
+	display: table-row !important;
+}
+
+th.visible-md,
+td.visible-md {
+	display: table-cell !important;
+}
+
+.visible-md-block {
+	display: block !important;
+}
+
+.visible-md-inline {
+	display: inline !important;
+}
+
+.visible-md-inline-block {
+	display: inline-block !important;
+}
+
+.hidden-md {
+	display: none !important;
+}
+
+}
+
 @media (min-width: 1100px) {
 
 .main-nav ul > li {
-	padding: 34px 0 41px;
+	padding: 39px 0 41px;
+	text-align: right;
 }
 
 .page-caption {
@@ -2849,6 +2936,11 @@ td.visible-md {
 	font-size: 50px;
 	line-height: 60px;
 	font-weight: 300;
+	margin-bottom: 40px;
+}
+
+.contacts__map {
+	height: 505px;
 }
 
 }
@@ -2889,7 +2981,7 @@ td.visible-lg {
 }
 
 .container {
-	width: 960px;
+	width: 970px;
 }
 
 .col-lg-1,
@@ -3111,12 +3203,23 @@ td.visible-lg {
 	margin-left: 0%;
 }
 
+.pull-lg {
+	float: right;
+}
+
+.page-footer__container {
+	padding: 23px 0 0;
+}
+
 .intro {
 	height: 854px;
+	background-image: url("../img/bg2-2x.jpg");
+	background-position: 50% 0;
+	background-size: cover;
 }
 
 .intro__container {
-	background: url(../img/iphone-hand-3-1x.png) no-repeat -29% 100%;
+	background: url(../img/bg-hand3-1x.png) no-repeat -29% 100%;
 }
 
 .intro__caption {
@@ -3137,6 +3240,59 @@ td.visible-lg {
 
 .intro-desc__apps-list li {
 	margin: 0 10px 0 23px;
+}
+
+.box--angle {
+	margin-bottom: -183px;
+	height: 216px;
+}
+
+.box--footer {
+	margin-bottom: -40px;
+}
+
+.slick-prev,
+.slick-next {
+	display: block;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	border-left: 2px solid #bec2c7;
+	border-bottom: 2px solid #bec2c7;
+}
+
+.slick-slider .slick-dots {
+	display: none !important;
+}
+
+.box__container--price {
+	padding-top: 0px;
+	margin-top: -15px;
+}
+
+.price-table--big {
+	max-width: 100%;
+	margin: 0 auto 45px;
+}
+
+.price-table--big .price-table__caption {
+	font-size: 18px;
+	padding: 17px 10px;
+}
+
+.price-table--big .price-table__caption span {
+	font-size: 24px;
+	line-height: 34px;
+}
+
+.price-table--big td {
+	padding: 12px 16px 17px;
+	font-size: 18px;
+}
+
+.reviews {
+	padding-top: 69px;
 }
 
 .reviews .icon-quotes {
@@ -3160,6 +3316,19 @@ td.visible-lg {
 	font-weight: 400;
 }
 
+.contacts__list dt {
+	padding-bottom: 18px;
+}
+
+}
+
+@media (min-width: 1200px) and only screen and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and only screen and (min-device-pixel-ratio: 2), (min-width: 1200px) and only screen and (min-resolution: 192dpi), (min-width: 1200px) and only screen and (min-resolution: 2dppx) {
+
+.intro {
+	background-image: url("../img/bg__intro.png");
+	background-size: 100% auto;
+}
+
 }
 
 @media (min-width: 1400px) {
@@ -3179,7 +3348,7 @@ td.visible-lg {
 }
 
 .box--angle {
-	margin-bottom: -255px;
+	margin-bottom: -214px;
 	height: 250px;
 }
 

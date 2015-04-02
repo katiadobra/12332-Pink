@@ -8,6 +8,7 @@
   margin: 0 auto;
   padding-top: 39px;
   text-align: center;
+  background: @white;
   
   .icon-quotes {
     display: none;
@@ -28,6 +29,8 @@
 
   &__text {
     line-height: 30px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -35,6 +38,7 @@
 @media (min-width: 700px) {
   .reviews {
     padding-top: 11px;
+    padding-bottom: 25px;
   }
   .reviews__text {
     padding-bottom: 21px;
@@ -52,6 +56,9 @@
 }
 
 @media (min-width: 1200px) {
+  .reviews {
+    padding-top: 69px;
+  }
   .reviews .icon-quotes {
     display: inline-block;
   }
@@ -67,5 +74,8 @@
       display: block;
       .text-font (18px, 25px, 400)
     }
+  }
+  .contacts__list dt {
+    padding-bottom: 18px;
   }
 }
