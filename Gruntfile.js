@@ -6,6 +6,12 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
 
+    config: {
+      src: 'src',
+      dist: 'build'
+    },
+
+
     notify: {
       less: {
         options: {
@@ -18,6 +24,12 @@ module.exports = function(grunt) {
           title: 'svg task complete',  // optional 
           message: 'SVG done' //required 
         }
+      },
+      build: {
+        options: {
+          title: 'Complete',  // optional 
+          message: 'Build task finished' //required 
+        }
       }
     },
 
@@ -25,7 +37,7 @@ module.exports = function(grunt) {
     lintspaces: {
       all: {
         src: [
-          '*.html'
+          '<%= config.dist %>/*.html'
         ],
         options: {
           newline: true,
@@ -47,27 +59,27 @@ module.exports = function(grunt) {
 
     less: {
       build: {
-        src: 'less/style.less',
-        dest: 'css/style.css'
+        files: {
+          '<%= config.dist %>/css/style.css': ['<%= config.src %>/less/style.less']
+        }
       }
     },
 
 
 
     autoprefixer: {
-      
       style: {
         options: {
           browsers: ['last 2 versions', 'ie 9']
         },
-        src: 'css/style.css'
+        src: '<%= config.dist %>/css/style.css'
       },
     },
     
     cmq: {
       style: {
         files: {
-          'css/style.css': ['css/style.css']
+          '<%= config.dist %>/css/style.css': ['<%= config.dist %>/css/style.css']
         }
       }
     },
@@ -75,61 +87,71 @@ module.exports = function(grunt) {
 
     cssmin: {
       target: {
-        src: 'css/style.css',
-        dest: 'css/style.min.css'
+        src: '<%= config.dist %>/css/style.css',
+        dest: '<%= config.dist %>/css/style.min.css'
+      }
+    },
+
+
+    // img
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= config.dist %>/img/',
+          src: ['*.{jpg,gif,png}'],
+          dest: '<%= config.dist %>/img/'
+        }]
       }
     },
 
 
     // SVG
-    // svgmin: {
-    //   options: {
-    //     plugins: [
-    //       {
-    //         removeDesc: true
-    //       }, 
-    //       { removeViewBox: false },
-    //       { removeUselessStrokeAndFill: false },
-    //       { removeEmptyAttrs: false }  
-    //     ]
-    //   },
-    //   dist: {
-    //     files: [{
-    //       expand: true,
-    //       cwd: 'svgs',
-    //       src: ['*.svg'],
-    //       dest: 'svgmin'
-    //     }]
-    //   }
-    // },
+    svgmin: {
+      options: {
+        plugins: [
+          {
+            removeDesc: true
+          }, 
+          { removeViewBox: false },
+          { removeUselessStrokeAndFill: false },
+          { removeEmptyAttrs: false }  
+        ]
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.src %>/svgs',
+          src: ['*.svg'],
+          dest: 'svgmin'
+        }]
+      }
+    },
 
     grunticon: {
       makesvg: {
         files: [{
           expand: true, //
-          // cwd: 'assets/svgmin',
+          cwd: '<%= config.src %>/_svg',
           src: ['svgs/*.svg', '*.png'], // old files
-          dest: 'svg' // new files
+          dest: '<%= config.src %>' // new files
         }],
         options: {
           enhanceSVG: true, // style and animate with CSS or add interactivity with JS
-        
-        // имена CSS-файлов
           datasvgcss : 'css/grunticon-icons.data.svg.css',
           datapngcss : 'css/grunticon-icons.data.png.css',
           urlpngcss : 'css/grunticon-icons.fallback.css',
-        // имя HTML-файла с предварительным просмотром всех иконок
           previewhtml : 'preview.html',
-        // grunticon loader code snippet filename
           loadersnippet: 'grunticon.loader.js',
         // имя папки, в которую будут записаны PNG
-          pngfolder : 'png',
-            pngpath : '../png',
-        // префикс для CSS-классов
+          pngfolder : 'img/png',
+            pngpath : '..img/png',
           cssprefix: ".icon-",
 
-          template : 'svg/template.hbs',
-        // ширина и высота по умолчанию, либо указывать вручную в css
+          template : '<%= config.src %>/_svg/template.hbs',
           defaultWidth : '20px',
           defaultHeight: '20px'
         }
@@ -137,19 +159,7 @@ module.exports = function(grunt) {
     },
 
 
-    // clean
-    clean: {
-      svg: [
-        'svgmin',
-        'svg/png',
-        'svg/css/grunticon*',
-        'svg/*.html'
-      ]
-    },
-
-
     // Watch 
-
     watch: {
       less: {
         files: 'less/**/*.less',
@@ -165,7 +175,38 @@ module.exports = function(grunt) {
           livereload: true
         }
       }
+    },
+
+
+    // clean
+    clean: {
+      build: '<%= config.dist %>',
+      svg: [
+        '<%= config.src %>/_svg/svgmin',
+        '<%= config.src %>/img/png',
+        '<%= config.src %>/svg/css/grunticon*',
+        '<%= config.src %>/svg/*.html'
+      ],
+    },
+
+
+    // copy
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.src %>',
+          src: [
+            'css/*',
+            'img/**',
+            'js/**',
+            'index.html'
+          ],
+          dest: '<%= config.dist %>'
+        }]
+      }
     }
+
 
   });
 
@@ -183,6 +224,20 @@ module.exports = function(grunt) {
 
   grunt.registerTask('lint', [
     'lintspaces'
+  ]);
+
+  grunt.registerTask('img', [
+    'imagemin'
+  ]);
+
+  grunt.registerTask('b', [
+    'clean:build',
+    'copy',
+    'less',
+    'autoprefixer',
+    'cmq',
+    'cssmin',
+    'notify:build'
   ]);
 
   grunt.registerTask('svg', [
