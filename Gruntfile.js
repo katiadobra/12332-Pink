@@ -60,7 +60,7 @@ module.exports = function(grunt) {
     less: {
       build: {
         files: {
-          '<%= config.dist %>/css/style.css': ['<%= config.src %>/less/style.less']
+          '<%= config.src %>/css/style.css': ['<%= config.src %>/less/style.less']
         }
       }
     },
@@ -72,14 +72,14 @@ module.exports = function(grunt) {
         options: {
           browsers: ['last 2 versions', 'ie 9']
         },
-        src: '<%= config.dist %>/css/style.css'
+        src: '<%= config.src %>/css/style.css'
       },
     },
     
     cmq: {
       style: {
         files: {
-          '<%= config.dist %>/css/style.css': ['<%= config.dist %>/css/style.css']
+          '<%= config.src %>/css/style.css': ['<%= config.src %>/css/style.css']
         }
       }
     },
@@ -87,8 +87,8 @@ module.exports = function(grunt) {
 
     cssmin: {
       target: {
-        src: '<%= config.dist %>/css/style.css',
-        dest: '<%= config.dist %>/css/style.min.css'
+        src: '<%= config.src %>/css/style.css',
+        dest: '<%= config.src %>/css/style.min.css'
       }
     },
 
@@ -101,9 +101,9 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= config.dist %>/img/',
+          cwd: '<%= config.src %>/img/',
           src: ['*.{jpg,gif,png}'],
-          dest: '<%= config.dist %>/img/'
+          dest: '<%= config.src %>/img/'
         }]
       }
     },
@@ -144,7 +144,7 @@ module.exports = function(grunt) {
           datasvgcss : 'css/grunticon-icons.data.svg.css',
           datapngcss : 'css/grunticon-icons.data.png.css',
           urlpngcss : 'css/grunticon-icons.fallback.css',
-          previewhtml : 'preview.html',
+          previewhtml : '_preview.html',
           loadersnippet: 'grunticon.loader.js',
         // имя папки, в которую будут записаны PNG
           pngfolder : 'img/png',
@@ -162,7 +162,7 @@ module.exports = function(grunt) {
     // Watch 
     watch: {
       less: {
-        files: 'less/**/*.less',
+        files: '<%= config.src %>/less/**/*.less',
         tasks: ['style'],
         options: {
           spawn: false,
@@ -170,7 +170,7 @@ module.exports = function(grunt) {
         }
       },
       html: {
-        files: '*.html',
+        files: '<%= config.src %>/*.html',
         options: {
           livereload: true
         }
@@ -197,10 +197,15 @@ module.exports = function(grunt) {
           expand: true,
           cwd: '<%= config.src %>',
           src: [
-            'css/*',
-            'img/**',
-            'js/**',
-            'index.html'
+            '**',
+            '!less/**', // no less
+            '!_*/**', // ignore '_name' folders
+            '!**/js/**' // ignore all js
+            // 'js/build/*'
+            // 'css/*',
+            // 'img/**',
+            // 'js/**',
+            // '*.html'
           ],
           dest: '<%= config.dist %>'
         }]
