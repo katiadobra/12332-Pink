@@ -1336,6 +1336,7 @@ p {
 
 .btn {
 	display: inline-block;
+	vertical-align: middle;
 	padding: 8px 25px 11px;
 	margin-bottom: 33px;
 	font-size: 18px;
@@ -1433,6 +1434,7 @@ p {
 
 .intro-desc__apps-list li {
 	display: inline-block;
+	vertical-align: bottom;
 	margin: 0 18px 0 15px;
 }
 
@@ -1460,6 +1462,10 @@ p {
 	-ms-transform: rotate(-5.6deg);
 	transform: rotate(-5.6deg);
 	z-index: -1;
+}
+
+.box--map {
+	height: 225px;
 }
 
 .box__container {
@@ -1490,8 +1496,9 @@ p {
 
 .slider__slide {
 	min-height: 303px;
-	width: 33.33333333333333%;
+	width: 33.2%;
 	display: inline-block;
+	vertical-align: middle;
 }
 
 .slider--slides {
@@ -1518,6 +1525,7 @@ p {
 
 .slider-controls label {
 	display: inline-block;
+	vertical-align: bottom;
 	width: 12px;
 	height: 12px;
 	margin: 0 4px;
@@ -1642,6 +1650,7 @@ input[id^="btn-"] {
 .slick-dots li {
 	position: relative;
 	display: inline-block;
+	vertical-align: bottom;
 	margin: 0px 2px;
 	width: 20px;
 	height: 20px;
@@ -2007,6 +2016,7 @@ input[id^="btn-"] {
 
 .contacts__list {
 	display: inline-block;
+	vertical-align: middle;
 	text-align: center;
 	margin-top: 6px;
 }
@@ -2026,7 +2036,10 @@ input[id^="btn-"] {
 }
 
 .map {
-	height: 225px;
+	background: url(../img/map.png) no-repeat 50% 0;
+	height: 100%;
+	padding: 0;
+	margin: 0;
 }
 
 .socials {
@@ -2040,6 +2053,7 @@ input[id^="btn-"] {
 
 .social__btn {
 	display: inline-block;
+	vertical-align: middle;
 	width: 51px;
 	height: 51px;
 	margin-right: 8px;
@@ -2047,7 +2061,6 @@ input[id^="btn-"] {
 	color: transparent;
 	font: 0/0 a;
 	text-align: center;
-	vertical-align: middle;
 	border: 3px solid #e9ebec;
 	border-radius: 50%;
 }
@@ -2118,14 +2131,6 @@ input[id^="btn-"] {
 
 }
 
-@media (min-width: 700px) and (max-width: 992px) {
-
-.col-md--pl0 {
-	padding-left: 0;
-}
-
-}
-
 @media (min-width: 700px) and (max-width: 991px) {
 
 .visible-sm {
@@ -2159,15 +2164,6 @@ td.visible-sm {
 
 .hidden-sm {
 	display: none !important;
-}
-
-}
-
-@media (min-width: 700px) and only screen and (-webkit-min-device-pixel-ratio: 2), (min-width: 700px) and only screen and (min-device-pixel-ratio: 2), (min-width: 700px) and only screen and (min-resolution: 192dpi), (min-width: 700px) and only screen and (min-resolution: 2dppx) {
-
-.intro {
-	background-image: url("../img/bg2-2x.jpg");
-	background-size: 100% auto;
 }
 
 }
@@ -2431,6 +2427,7 @@ td.visible-sm {
 
 .logo .icon-logotype-white-2 {
 	display: inline-block;
+	vertical-align: bottom;
 }
 
 .btn {
@@ -2496,6 +2493,10 @@ td.visible-sm {
 	-webkit-transform: rotate(-4.4deg);
 	-ms-transform: rotate(-4.4deg);
 	transform: rotate(-4.4deg);
+}
+
+.box--map {
+	height: 363px;
 }
 
 .box--angle {
@@ -2584,8 +2585,58 @@ td.visible-sm {
 	line-height: 31px;
 }
 
-.map {
-	height: 363px;
+}
+
+@media (min-width: 700px) and (max-width: 992px) {
+
+.col-md--pl0 {
+	padding-left: 0;
+}
+
+}
+
+@media (min-width: 700px) and only screen and (-webkit-min-device-pixel-ratio: 2), (min-width: 700px) and only screen and (min-device-pixel-ratio: 2), (min-width: 700px) and only screen and (min-resolution: 192dpi), (min-width: 700px) and only screen and (min-resolution: 2dppx) {
+
+.intro {
+	background-image: url("../img/bg2-2x.jpg");
+	background-size: 100% auto;
+}
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+.visible-md {
+	display: block !important;
+}
+
+table.visible-md {
+	display: table;
+}
+
+tr.visible-md {
+	display: table-row !important;
+}
+
+th.visible-md,
+td.visible-md {
+	display: table-cell !important;
+}
+
+.visible-md-block {
+	display: block !important;
+}
+
+.visible-md-inline {
+	display: inline !important;
+}
+
+.visible-md-inline-block {
+	display: inline-block !important;
+}
+
+.hidden-md {
+	display: none !important;
 }
 
 }
@@ -2834,6 +2885,7 @@ td.visible-sm {
 	border-top: none;
 	box-shadow: none;
 	padding: 24px 0 29px;
+	overflow: hidden;
 }
 
 .main-nav > li:last-child {
@@ -2904,6 +2956,7 @@ td.visible-sm {
 .logo .icon-logotype-white-3,
 .logo .icon-logotype-blue-3 {
 	display: inline-block;
+	vertical-align: bottom;
 }
 
 .logo .icon-logotype-white-2,
@@ -2923,6 +2976,10 @@ td.visible-sm {
 .box__container--features {
 	padding: 0;
 	margin-top: -115px;
+}
+
+.box--map {
+	height: 505px;
 }
 
 .features {
@@ -3017,43 +3074,6 @@ td.visible-sm {
 
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-
-.visible-md {
-	display: block !important;
-}
-
-table.visible-md {
-	display: table;
-}
-
-tr.visible-md {
-	display: table-row !important;
-}
-
-th.visible-md,
-td.visible-md {
-	display: table-cell !important;
-}
-
-.visible-md-block {
-	display: block !important;
-}
-
-.visible-md-inline {
-	display: inline !important;
-}
-
-.visible-md-inline-block {
-	display: inline-block !important;
-}
-
-.hidden-md {
-	display: none !important;
-}
-
-}
-
 @media (min-width: 1100px) {
 
 .main-nav li {
@@ -3076,10 +3096,6 @@ td.visible-md {
 
 .contacts__list dt {
 	padding-bottom: 18px;
-}
-
-.map {
-	height: 505px;
 }
 
 }
@@ -3387,7 +3403,7 @@ td.visible-lg {
 }
 
 .box--footer {
-	margin-bottom: -40px;
+	margin-bottom: 0;
 }
 
 .slick-slider {
@@ -3440,6 +3456,7 @@ td.visible-lg {
 
 .reviews .icon-quotes {
 	display: inline-block;
+	vertical-align: bottom;
 }
 
 .reviews__text {
@@ -3472,18 +3489,14 @@ td.visible-lg {
 
 @media (min-width: 1400px) {
 
-.map {
-	height: 522px;
-}
-
-}
-
-@media (min-width: 1450px) {
-
 .box--shear:before {
 	-webkit-transform: rotate(-3.7deg);
 	-ms-transform: rotate(-3.7deg);
 	transform: rotate(-3.7deg);
+}
+
+.box--map {
+	height: 522px;
 }
 
 .box--angle {

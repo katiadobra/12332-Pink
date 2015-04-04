@@ -98,31 +98,22 @@ module.exports = function(grunt) {
 
 
     // script
-    // concat: {
-    //   app: {
-    //     src: [
-    //       '<%= config.src %>/js/app/*.js',
-    //       '<%= config.src %>/js/main.js'
-    //     ],
-    //     dest: '<%= config.src %>/js/build/script.js'
-    //   },
-    //   plugins: {
-    //     src: '<%= config.src %>/js/plugins/*.js',
-    //     dest: '<%= config.src %>/js/build/plugins.js'
-    //   }
-    // },
+    concat: {
+      scripts: {
+        src: [
+          '<%= config.src %>/js/scripts/*.js'
+        ],
+        dest: '<%= config.src %>/js/script.js'
+      }
+    },
 
 
-    // uglify: {
-    //   app: {
-    //     src: '<%= config.src %>/js/build/script.js',
-    //     dest: '<%= config.src %>/js/build/script.min.js'
-    //   },
-    //   plugins: {
-    //     src: '<%= config.src %>/js/build/plugins.js',
-    //     dest: '<%= config.src %>/js/build/plugins.min.js'
-    //   }
-    // },
+    uglify: {
+      scripts: {
+        src: '<%= config.src %>/js/script.js',
+        dest: '<%= config.src %>/js/script.min.js'
+      }
+    },
 
 
 
@@ -231,9 +222,9 @@ module.exports = function(grunt) {
           cwd: '<%= config.src %>',
           src: [
             '**',
-            '!less/**', // no less
-            '!_*/**', // ignore '_name' folders
-            // '!**/js/**' 
+            '!less/**',
+            '!_*/**',
+            '!js/scripts/**' 
             // 'js/build/*'
             // 'css/*',
             // 'img/**',
@@ -260,6 +251,11 @@ module.exports = function(grunt) {
     'notify:less'
   ]);
 
+  grunt.registerTask('script', [
+    'concat',
+    'uglify',
+  ]);
+
   grunt.registerTask('lint', [
     'lintspaces'
   ]);
@@ -275,6 +271,8 @@ module.exports = function(grunt) {
     'autoprefixer',
     'cmq',
     'cssmin',
+    'concat',
+    'uglify',
     'notify:build'
   ]);
 

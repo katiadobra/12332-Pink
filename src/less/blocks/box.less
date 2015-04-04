@@ -18,6 +18,10 @@
     z-index: -1;
   }
 
+  &--map {
+    height: 225px;
+  }
+
   &__container {
     padding: 25px 0;
 
@@ -48,6 +52,9 @@
   .box--shear:before {
     transform: rotate(-4.4deg);
   }
+  .box--map {
+    height: 363px;
+  }
   .box--angle {
     margin-bottom: -150px;
     height: 145px;
@@ -72,6 +79,9 @@
     padding: 0;
     margin-top: -115px;
   }
+  .box--map {
+    height: 505px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -80,13 +90,16 @@
     height: 216px;
   }
   .box--footer {
-    margin-bottom: -40px;
+    margin-bottom: 0;
   }
 }
 
-@media (min-width: 1450px) {
+@media (min-width: 1400px) {
   .box--shear:before {
     transform: rotate(-3.7deg);
+  }
+  .box--map {
+    height: 522px;
   }
   .box--angle {
     margin-bottom: -214px;
