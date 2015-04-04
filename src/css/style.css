@@ -1198,11 +1198,15 @@ p {
 }
 
 .page-caption {
+	display: block;
 	padding: 16px 0;
+	margin: 0;
 	font-size: 24px;
 	font-weight: 300;
 	line-height: 28px;
 	text-align: center;
+	text-decoration: none;
+	color: #000000;
 }
 
 .logo {
@@ -1746,9 +1750,12 @@ input[id^="btn-"] {
 
 .features__caption {
 	display: block;
+	margin: 0;
+	font-weight: 700;
 	font-size: 18px;
 	line-height: 21px;
 	padding-bottom: 13px;
+	color: #000000;
 }
 
 .features__mob-img {
@@ -1793,18 +1800,21 @@ input[id^="btn-"] {
 }
 
 .effect__caption {
+	display: block;
 	font-size: 30px;
 	line-height: 36px;
 	font-weight: 700;
-	margin-bottom: 10px;
-	padding-right: 30px;
+	margin: 0;
+	padding: 25px 30px 10px 0;
+	color: #000000;
+	text-decoration: none;
 }
 
 .effect__text {
 	padding-top: 15px;
 }
 
-.effect__text a {
+.effect__link {
 	text-decoration: underline;
 }
 
@@ -1860,10 +1870,14 @@ input[id^="btn-"] {
 }
 
 .contacts__caption {
+	display: block;
 	font-size: 24px;
 	line-height: 28px;
 	font-weight: 300;
-	padding-bottom: 7px;
+	margin: 0;
+	padding: 33px 0 7px;
+	color: #000000;
+	text-decoration: none;
 }
 
 .contacts__text {

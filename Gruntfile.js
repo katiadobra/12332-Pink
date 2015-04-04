@@ -34,6 +34,7 @@ module.exports = function(grunt) {
     },
 
 
+    // html
     lintspaces: {
       all: {
         src: [
@@ -56,7 +57,7 @@ module.exports = function(grunt) {
     },
 
 
-
+    // style
     less: {
       build: {
         files: {
@@ -75,7 +76,9 @@ module.exports = function(grunt) {
         src: '<%= config.src %>/css/style.css'
       },
     },
-    
+
+
+
     cmq: {
       style: {
         files: {
@@ -85,12 +88,42 @@ module.exports = function(grunt) {
     },
 
 
+
     cssmin: {
       target: {
         src: '<%= config.src %>/css/style.css',
         dest: '<%= config.src %>/css/style.min.css'
       }
     },
+
+
+    // script
+    // concat: {
+    //   app: {
+    //     src: [
+    //       '<%= config.src %>/js/app/*.js',
+    //       '<%= config.src %>/js/main.js'
+    //     ],
+    //     dest: '<%= config.src %>/js/build/script.js'
+    //   },
+    //   plugins: {
+    //     src: '<%= config.src %>/js/plugins/*.js',
+    //     dest: '<%= config.src %>/js/build/plugins.js'
+    //   }
+    // },
+
+
+    // uglify: {
+    //   app: {
+    //     src: '<%= config.src %>/js/build/script.js',
+    //     dest: '<%= config.src %>/js/build/script.min.js'
+    //   },
+    //   plugins: {
+    //     src: '<%= config.src %>/js/build/plugins.js',
+    //     dest: '<%= config.src %>/js/build/plugins.min.js'
+    //   }
+    // },
+
 
 
     // img
@@ -200,7 +233,7 @@ module.exports = function(grunt) {
             '**',
             '!less/**', // no less
             '!_*/**', // ignore '_name' folders
-            '!**/js/**' // ignore all js
+            // '!**/js/**' 
             // 'js/build/*'
             // 'css/*',
             // 'img/**',

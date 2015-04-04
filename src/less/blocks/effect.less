@@ -26,17 +26,20 @@
   }
 
   &__caption {
+    display: block;
     .text-font (30px, 36px, @fw-bold);
-    margin-bottom: 10px;
-    padding-right: 30px;
+    margin: 0;
+    padding: 25px 30px 10px 0;
+    color: @grey-base;
+    text-decoration: none;
   }
   
   &__text {
     padding-top: 15px;
+  }
 
-    a {
-      text-decoration: underline;
-    }
+  &__link {
+    text-decoration: underline;
   }
 }
 
