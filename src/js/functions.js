@@ -18,15 +18,15 @@ var module1 = (function() {
   //   adaptiveHeight: true,
   //   mobileFirst: true
   // });
-
 })();
+
 
 var slider = (function() {
   var me = {};
 
   me.init = function() {
     $('.js-slider').slick({
-      autoplay: true,
+      // autoplay: true,
       dots: true,
       adaptiveHeight: true,
       arrows: true,
@@ -38,11 +38,51 @@ var slider = (function() {
 
 })();
 
+
+
+var gmap = (function() {
+  var pinkmap = {};
+
+  pinkmap.init = function() {
+
+    var map;
+    var latlng = new google.maps.LatLng(59.936468, 30.321086);
+    var markers = [];
+    var image = new google.maps.MarkerImage('img/icon.png'
+    );
+
+    
+    var mapOptions = {
+      zoom: 15,
+      center: latlng,
+      mapTypeControl: false,
+      navigationControl: false
+    };
+
+    map = new google.maps.Map(document.getElementById("js-map"), mapOptions);
+    addMarker();
+
+    function addMarker() {
+      markers.push(new google.maps.Marker({
+        position: latlng,
+        raiseOnDrag: false,
+        icon: image,
+        map: map,
+        draggable: false
+      }));
+    }
+  }
+
+  return pinkmap;
+
+})();
+
 // slider.init();
 
 $(document).ready(function() {
 
   document.querySelector('.js-slider') && slider.init();
+  document.querySelector('#js-map') && gmap.init();
   
   // console.log(document.querySelector('.slider'));
   // console.log(document.querySelector('.slider2'));
