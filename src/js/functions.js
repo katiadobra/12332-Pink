@@ -46,15 +46,14 @@ var gmap = (function() {
   pinkmap.init = function() {
 
     var map;
-    var latlng = new google.maps.LatLng(59.936468, 30.321086);
+    var pink = new google.maps.LatLng(59.936468, 30.321086);
     var markers = [];
-    var image = new google.maps.MarkerImage('img/icon.png'
-    );
+    var image = new google.maps.MarkerImage('img/icon.png');
 
     
     var mapOptions = {
       zoom: 15,
-      center: latlng,
+      center: pink,
       mapTypeControl: false,
       navigationControl: false
     };
@@ -64,7 +63,7 @@ var gmap = (function() {
 
     function addMarker() {
       markers.push(new google.maps.Marker({
-        position: latlng,
+        position: pink,
         raiseOnDrag: false,
         icon: image,
         map: map,

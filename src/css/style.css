@@ -2969,6 +2969,23 @@ td.visible-sm {
 	background: #f2f2f2;
 }
 
+.effect__text {
+	padding: 72px 45px 10px;
+}
+
+.effect__text p {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.effect__caption {
+	padding: 25px 30px 22px 0;
+}
+
+.effect__link {
+	font-size: 18px;
+}
+
 .socials {
 	padding: 55px 0;
 }
