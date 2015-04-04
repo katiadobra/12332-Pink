@@ -1496,7 +1496,7 @@ p {
 
 .slider__slide {
 	min-height: 303px;
-	width: 33.2%;
+	width: 33.1%;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -1509,7 +1509,7 @@ p {
 }
 
 .slider--tables {
-	padding: 0 25px 0 18px;
+	padding: 0 20px;
 }
 
 .slider-controls {
@@ -1893,8 +1893,7 @@ input[id^="btn-"] {
 }
 
 .features__mob-img img {
-	min-width: 157px;
-	max-width: 268px;
+	width: 156px;
 }
 
 .effect {
@@ -2543,7 +2542,7 @@ td.visible-sm {
 }
 
 .features__mob-img img {
-	max-width: 268px;
+	width: 268px;
 }
 
 .reviews {
