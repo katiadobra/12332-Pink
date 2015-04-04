@@ -101,6 +101,7 @@ module.exports = function(grunt) {
     concat: {
       scripts: {
         src: [
+          '<%= config.src %>/js/scripts/jquery*.js',
           '<%= config.src %>/js/scripts/*.js'
         ],
         dest: '<%= config.src %>/js/script.js'
