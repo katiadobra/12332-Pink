@@ -83,20 +83,22 @@
     .img-retina('../img/bg2-1x.jpg';'../img/bg2-2x.jpg'; 100%; auto);
     background-position: 50% 0;
     background-size: cover;
-  }
-  .intro__container {
-    background: url(../img/2-1x.png) no-repeat 0px 100%;
-    // .img-retina('../img/bg-hand2-1x.png';'../img/bg-hand1-2x.png'; 470px; 545px);
-    // .img-retina('../img/2-1x.png';'../img/2-2x.png'; 449px; 497px);
-    // background-size: 449px 497px;
-  }
-  .intro__caption {
-    width: 260px;
-    top: 203px;
-    left: 60px;
-    font-size: 40px;
-    line-height: 48px;
-    margin: 0;
+  
+    &__container {
+      background: url(../img/2-1x.png) no-repeat 0px 100%;
+      // .img-retina('../img/bg-hand2-1x.png';'../img/bg-hand1-2x.png'; 470px; 545px);
+      // .img-retina('../img/2-1x.png';'../img/2-2x.png'; 449px; 497px);
+      // background-size: 449px 497px;
+    }
+    
+    &__caption {
+      width: 260px;
+      top: 203px;
+      left: 60px;
+      font-size: 40px;
+      line-height: 48px;
+      margin: 0;
+    }
   }
   .intro-desc {
     position: absolute;
@@ -104,21 +106,25 @@
     bottom: 81px;
     left: 40px;
     right: auto;
-  }
-  .intro-desc p {
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 24px;
-    letter-spacing: 0;
-  }
-  .intro-desc__container {
-    width: 305px;
-  }
-  .intro-desc__apps-list {
-    padding-bottom: 37px;
-  }
-  .intro-desc__apps-list li {
-    margin: 0 18px 0 15px;
+    
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 24px;
+      letter-spacing: 0;
+    }
+  
+    &__container {
+      width: 305px;
+    }
+  
+    &__apps-list {
+      padding-bottom: 37px;
+    }
+  
+    &__apps-list li {
+      margin: 0 18px 0 15px;
+    }
   }
   .btn--fixed {
     max-width: 100%;
@@ -132,24 +138,28 @@
     .img-retina('../img/bg2-2x.jpg';'../img/bg__intro.png'; 100%; auto);
     background-position: 50% 0;
     background-size: cover;
-  }
-  .intro__container {
-    background: url(../img/bg-hand3-1x.png) no-repeat -29% 100%;
-  }
-  .intro__caption {
-    top: 218px;
-    left: 31px;
-    font-size: 50px;
-    line-height: 60px;
+  
+    &__container {
+      background: url(../img/bg-hand3-1x.png) no-repeat -29% 100%;
+    }
+  
+    &__caption {
+      top: 218px;
+      left: 31px;
+      font-size: 50px;
+      line-height: 60px;
+    }
   }
   .intro-desc {
     bottom: 94px;
     left: 0px;
-  }
-  .intro-desc__apps-list {
-    padding-bottom: 55px;
-  }
-  .intro-desc__apps-list li {
-    margin: 0 10px 0 23px;
+    
+    &__apps-list {
+      padding-bottom: 55px;
+    }
+    
+    &__apps-list li {
+      margin: 0 10px 0 23px;
+    }
   }
 }

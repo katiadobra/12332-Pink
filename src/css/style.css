@@ -1897,7 +1897,7 @@ input[id^="btn-"] {
 }
 
 .effect {
-	padding: 57px 0;
+	padding: 57px 0 65px;
 }
 
 .effect__timer {
@@ -2035,7 +2035,7 @@ input[id^="btn-"] {
 }
 
 .map {
-	background: url(../img/map.png) no-repeat 50% 0;
+	background: url(../img/map.jpg) no-repeat 50% 0;
 	height: 100%;
 	padding: 0;
 	margin: 0;
@@ -2398,7 +2398,7 @@ td.visible-sm {
 }
 
 .page-footer__container {
-	padding: 11px 0 0;
+	padding: 10px 0 0;
 }
 
 .page-caption {
@@ -2426,7 +2426,7 @@ td.visible-sm {
 
 .logo .icon-logotype-white-2 {
 	display: inline-block;
-	vertical-align: bottom;
+	vertical-align: middle;
 }
 
 .btn {
@@ -2495,7 +2495,7 @@ td.visible-sm {
 }
 
 .box--map {
-	height: 363px;
+	height: 387px;
 }
 
 .box--angle {
@@ -2517,7 +2517,7 @@ td.visible-sm {
 }
 
 .slick-slider {
-	padding-bottom: 6px;
+	padding-bottom: 35px;
 }
 
 .price-table__caption--flag:before {
@@ -2573,7 +2573,7 @@ td.visible-sm {
 	font-size: 40px;
 	line-height: 48px;
 	font-weight: 300;
-	margin-bottom: 28px;
+	padding-bottom: 35px;
 }
 
 .contacts__list {
@@ -2917,9 +2917,8 @@ td.visible-md {
 	background: rgba(0, 0, 0, 0.5);
 }
 
-.open .main-nav li:hover > a,
-.open .main-nav li:focus > a,
-.open .main-nav li.active > a {
+.page-header.open .main-nav li:hover > a,
+.page-header.open .main-nav li.active > a {
 	color: #ffffff;
 }
 
@@ -2936,11 +2935,8 @@ td.visible-md {
 	opacity: 1;
 }
 
-.main-nav li.active > a,
-.main-nav li > a:active {
+.main-nav li.active > a {
 	cursor: default;
-	text-decoration: none;
-	color: #ffffff;
 }
 
 .logo {
@@ -2955,7 +2951,7 @@ td.visible-md {
 .logo .icon-logotype-white-3,
 .logo .icon-logotype-blue-3 {
 	display: inline-block;
-	vertical-align: bottom;
+	vertical-align: middle;
 }
 
 .logo .icon-logotype-white-2,
@@ -2964,7 +2960,6 @@ td.visible-md {
 }
 
 .btn--fixed {
-	margin-bottom: 67px;
 	margin-left: 8px;
 }
 
@@ -3000,8 +2995,7 @@ td.visible-md {
 }
 
 .effect {
-	padding: 22px 0;
-	background: #F2F2F2;
+	padding: 22px 0 65px;
 }
 
 .effect__timer {
@@ -3011,7 +3005,6 @@ td.visible-md {
 .effect__timer svg {
 	height: 360px;
 	width: 300px;
-	fill: #dedede;
 }
 
 .effect__timer span {
@@ -3090,7 +3083,7 @@ td.visible-md {
 	font-size: 50px;
 	line-height: 60px;
 	font-weight: 300;
-	margin-bottom: 40px;
+	padding-bottom: 47px;
 }
 
 .contacts__list dt {
@@ -3362,7 +3355,11 @@ td.visible-lg {
 }
 
 .page-footer__container {
-	padding: 23px 0 0;
+	padding: 30px 0 0;
+}
+
+.btn--fixed {
+	margin-bottom: 67px;
 }
 
 .intro {
@@ -3425,13 +3422,13 @@ td.visible-lg {
 }
 
 .box__container--price {
-	padding-top: 0px;
-	margin-top: -15px;
+	padding-top: 0;
+	margin-top: 0;
 }
 
 .price-table--big {
 	max-width: 100%;
-	margin: 0 auto 45px;
+	margin: 14px auto 45px;
 }
 
 .price-table--big .price-table__caption {
@@ -3449,8 +3446,17 @@ td.visible-lg {
 	font-size: 18px;
 }
 
+.effect {
+	padding: 22px 0 100px;
+	background: #F2F2F2;
+}
+
+.effect__timer svg {
+	fill: #dedede;
+}
+
 .reviews {
-	padding-top: 69px;
+	padding-top: 43px;
 }
 
 .reviews .icon-quotes {

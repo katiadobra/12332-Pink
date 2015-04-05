@@ -179,13 +179,13 @@
 }
 
 
-.icon-smiley-1 {
+.icon-timer {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('..img/png/smiley-1.png');
+  background-image: url('..img/png/timer.png');
   background-repeat: no-repeat;
-  width: 77px;
-  height: 77px;
+  width: 261px;
+  height: 302px;
 }
 
 

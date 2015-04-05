@@ -1,5 +1,5 @@
 .effect {
-  padding: 57px 0;
+  padding: 57px 0 65px;
 
   &__timer {
     position: relative;
@@ -45,28 +45,28 @@
 
 @media (min-width: 992px) {
   .effect {
-    padding: 22px 0;
-    background: #F2F2F2;
-  }
-  .effect__timer {
-    padding-left: 0;
-  }
-  .effect__timer svg {
-    height: 360px;
-    width: 300px;
-    fill: #dedede;
+    padding: 22px 0 65px;
 
+    &__timer {
+      padding-left: 0;
+    }
+    
+    &__timer svg {
+      height: 360px;
+      width: 300px;
+    }
+    &__timer span {
+      top: 80px;
+      left: 28px;
+      width: 245px;
+      height: 245px;
+      font-size: 120px;
+      line-height: 205px;
+      border: 13px solid @pink;
+      background: #f2f2f2;
+    }
   }
-  .effect__timer span {
-    top: 80px;
-    left: 28px;
-    width: 245px;
-    height: 245px;
-    font-size: 120px;
-    line-height: 205px;
-    border: 13px solid @pink;
-    background: #f2f2f2;
-  }
+  
   .effect__text {
     padding: 72px 45px 10px;
   }
@@ -79,5 +79,16 @@
   }
   .effect__link {
     font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .effect {
+    padding: 22px 0 100px;
+    background: #F2F2F2;
+
+    &__timer svg {
+      fill: #dedede;
+    }
   }
 }

@@ -99,20 +99,31 @@ module.exports = function(grunt) {
 
     // script
     concat: {
-      scripts: {
+      modules: {
         src: [
-          '<%= config.src %>/js/scripts/jquery*.js',
-          '<%= config.src %>/js/scripts/*.js'
+          '<%= config.src %>/js/modules/*',
+          '<%= config.src %>/js/modules/functions.js'
         ],
         dest: '<%= config.src %>/js/script.js'
+      },
+      plugins: {
+        src: [
+          '<%= config.src %>/js/plugins/jquery*',
+          '<%= config.src %>/js/plugins/*'
+        ],
+        dest: '<%= config.src %>/js/plugins.js'
       }
     },
 
 
     uglify: {
-      scripts: {
+      modules: {
         src: '<%= config.src %>/js/script.js',
         dest: '<%= config.src %>/js/script.min.js'
+      },
+      plugins: {
+        src: '<%= config.src %>/js/plugins.js',
+        dest: '<%= config.src %>/js/plugins.min.js'
       }
     },
 
@@ -170,7 +181,7 @@ module.exports = function(grunt) {
           datapngcss : 'css/grunticon-icons.data.png.css',
           urlpngcss : 'css/grunticon-icons.fallback.css',
           previewhtml : '_preview.html',
-          loadersnippet: 'grunticon.loader.js',
+          loadersnippet: '_svg/grunticon.loader.js',
         // имя папки, в которую будут записаны PNG
           pngfolder : 'img/png',
             pngpath : '..img/png',
@@ -188,7 +199,7 @@ module.exports = function(grunt) {
     watch: {
       less: {
         files: '<%= config.src %>/less/**/*.less',
-        tasks: ['style', 'script'],
+        tasks: ['style'],
         options: {
           spawn: false,
           livereload: true
@@ -196,6 +207,12 @@ module.exports = function(grunt) {
       },
       html: {
         files: '<%= config.src %>/*.html',
+        options: {
+          livereload: true
+        }
+      },
+      script: {
+        files: '<%= config.src %>/js/**/*',
         options: {
           livereload: true
         }
@@ -225,8 +242,8 @@ module.exports = function(grunt) {
             '**',
             '!less/**',
             '!_*/**',
-            '!js/scripts/**' 
-            // 'js/build/*'
+            '!js/plugins/**',
+            '!js/modules/**' 
             // 'css/*',
             // 'img/**',
             // 'js/**',
@@ -236,7 +253,6 @@ module.exports = function(grunt) {
         }]
       }
     }
-
 
   });
 
