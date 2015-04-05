@@ -188,7 +188,7 @@ module.exports = function(grunt) {
     watch: {
       less: {
         files: '<%= config.src %>/less/**/*.less',
-        tasks: ['style'],
+        tasks: ['style', 'script'],
         options: {
           spawn: false,
           livereload: true
